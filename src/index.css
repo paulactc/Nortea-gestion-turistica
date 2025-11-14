@@ -1,0 +1,61 @@
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+/* Variables de colores globales */
+:root {
+  --color-primary: #8FAEA3;
+  --color-primary-light: #a8c4ba;
+  --color-primary-lighter: #c4d9d2;
+  --color-secondary: #4444DB;
+  --color-cream: #EAECEC;
+  --color-cream-light: #F5F6F6;
+  --color-white: #FFFFFF;
+  --color-border: #4444DB;
+  --color-text-dark: #3b7c3a;
+  --color-text-light: #8FAEA3;
+
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
