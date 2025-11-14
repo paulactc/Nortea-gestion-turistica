@@ -1,0 +1,128 @@
+/* WhatWeDo Component */
+
+.what-we-do {
+  padding: 80px 20px;
+  background: white;
+  position: relative;
+}
+
+.what-we-do__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.what-we-do__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #006994;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-family: 'Playfair Display', serif;
+}
+
+.what-we-do__description {
+  font-size: 1.25rem;
+  color: #006994;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+.what-we-do__features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.what-we-do__feature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: #EAECEC;
+  border-radius: 12px;
+  border: 1px solid #444444;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.what-we-do__feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(143, 174, 163, 0.2);
+  border-color: #444444;
+}
+
+.what-we-do__feature-icon {
+  width: 60px;
+  height: 60px;
+  background: #8faea3;
+  border: 2px solid #444444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(143, 174, 163, 0.3);
+}
+
+.what-we-do__feature-text {
+  font-size: 1.05rem;
+  color: #006994;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .what-we-do__title {
+    font-size: 2.3rem;
+  }
+
+  .what-we-do__description {
+    font-size: 1.15rem;
+  }
+
+  .what-we-do__features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .what-we-do {
+    padding: 60px 20px;
+  }
+
+  .what-we-do__title {
+    font-size: 2rem;
+  }
+
+  .what-we-do__description {
+    font-size: 1rem;
+  }
+
+  .what-we-do__feature {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .what-we-do__feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .what-we-do__feature-text {
+    font-size: 1rem;
+  }
+}

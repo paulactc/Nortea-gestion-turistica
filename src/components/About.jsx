@@ -6,55 +6,53 @@ const About = () => {
     <section className="about" id="nosotros">
       <div className="about-container">
         <div className="about-content">
-          <h2 className="about-title">¿Por Qué Elegirnos?</h2>
-          <p className="about-intro">
-            En NORTEA GESTION LOGISTICA ayudamos a propietarios del Oriente de Asturias —en zonas como Cangas de Onís, Parres y Onís— a sacar el máximo rendimiento a sus alojamientos turísticos.
+          <h2 className="about-title">Nuestro sello</h2>
+          <p className="about-intro-main">
+            Operamos en el Oriente de Asturias y conocemos de primera mano el
+            comportamiento del mercado, las temporadas, los huéspedes y lo que
+            realmente funciona.
           </p>
-          <p className="about-intro">
-            Nos encargamos de la gestión online, la coordinación de servicios, la atención al huésped y todos los aspectos operativos que garantizan una experiencia excelente tanto para el propietario como para el viajero.
+          <p className="about-intro-main">
+            Unimos datos, experiencia y cercanía local para ofrecer una gestión
+            profesional con alma.
           </p>
-          <p className="about-intro">
-            Tú decides hasta dónde quieres delegar; nosotros nos ocupamos del resto.
-          </p>
+
+          <h3 className="about-subtitle">Lo que nos caracteriza</h3>
+
           <div className="about-features">
             <div className="feature">
-              <h3 className="feature-title">Experiencia Comprobada</h3>
+              <h4 className="feature-title">Experiencia desde dentro del sector</h4>
               <p className="feature-description">
-                No somos nuevos en el tema. Llevamos más de 15 años gestionando
-                alojamientos turísticos y ya hemos visto de todo. Sabemos qué
-                funciona, qué no, y cómo sacarle el máximo jugo a cada
-                propiedad. Tu casa va a estar en manos que saben lo que hacen,
-                te lo prometemos.
+                Conocemos el día a día de la gestión turística en Asturias,
+                porque lo hemos vivido desde todos los ángulos.
               </p>
             </div>
             <div className="feature">
-              <h3 className="feature-title">Contigo ,de Tú a Tú</h3>
+              <h4 className="feature-title">Cercanía real</h4>
               <p className="feature-description">
-                Aquí no hay plantillas ni soluciones en serie. Cada casa tiene
-                su rollo y cada dueño tiene sus ideas, y nos parece genial. Nos
-                sentamos contigo, te escuchamos, y creamos un plan que vaya con
-                tu estilo y tus objetivos. Para nosotros eres parte del equipo,
-                no un número más en una lista.
+                No somos una plataforma anónima: respondemos, escuchamos y
+                actuamos con humanidad.
               </p>
             </div>
             <div className="feature">
-              <h3 className="feature-title">Tecnología Avanzada</h3>
+              <h4 className="feature-title">Estrategia + emoción</h4>
               <p className="feature-description">
-                amos las mejores herramientas para que todo funcione como un
-                reloj: sincronización automática con todas las plataformas,
-                gestión de precios inteligente, calendarios siempre
-                actualizados... Pero tú no tienes que tocar nada de eso. La
-                tecnología trabaja en segundo plano mientras tú vives tranquilo.
+                Combinamos análisis de datos y conocimiento local con una
+                atención cálida y profesional.
               </p>
             </div>
             <div className="feature">
-              <h3 className="feature-title">Transparencia Total</h3>
+              <h4 className="feature-title">Transparencia total</h4>
               <p className="feature-description">
-                Puedes ver cómo va tu propiedad cuando quieras, desde donde
-                quieras. Te mandamos informes cada mes, estamos siempre
-                disponibles para hablar, y si tienes dudas, las resolvemos al
-                momento. Trabajamos codo con codo, porque tu confianza es lo más
-                importante para nosotros.
+                Sin letra pequeña ni permanencias. Informes claros y
+                comunicación constante.
+              </p>
+            </div>
+            <div className="feature">
+              <h4 className="feature-title">Flexibilidad absoluta</h4>
+              <p className="feature-description">
+                Nos adaptamos al tipo de gestión, propiedad y nivel de
+                implicación que desees.
               </p>
             </div>
           </div>

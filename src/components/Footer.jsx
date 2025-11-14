@@ -5,64 +5,30 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-section">
-          <h3 className="footer-title">NORTEA GESTION LOGISTICA</h3>
-          <p className="footer-description">
-            Profesionales en la gestión logística integral.
-            Optimizamos tus operaciones mientras tú disfrutas de tranquilidad.
+        <div className="footer-main">
+          <h3 className="footer-title">Nortea Gestión Turística</h3>
+          <p className="footer-location">
+            📍 Oriente de Asturias · Cangas de Onís · Parres · Ribadesella · Onís
           </p>
-        </div>
-        <div className="footer-section">
-          <h4 className="footer-subtitle">Enlaces Rápidos</h4>
-          <ul className="footer-links">
-            <li>
-              <a href="#inicio">Inicio</a>
-            </li>
-            <li>
-              <a href="#servicios">Servicios</a>
-            </li>
-            <li>
-              <a href="#nosotros">Sobre Nosotros</a>
-            </li>
-            <li>
-              <a href="#contacto">Contacto</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h4 className="footer-subtitle">Servicios</h4>
-          <ul className="footer-links">
-            <li>
-              <a href="#servicios">Gestión de Licencias</a>
-            </li>
-            <li>
-              <a href="#servicios">Limpieza y Mantenimiento</a>
-            </li>
-            <li>
-              <a href="#servicios">Gestión de Reservas</a>
-            </li>
-            <li>
-              <a href="#servicios">Marketing Digital</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h4 className="footer-subtitle">Síguenos</h4>
-          <div className="social-links">
-            <a href="#" className="social-link" aria-label="Facebook">
-              Facebook
-            </a>
+          <div className="footer-contact">
+            <p>
+              📧 <a href="mailto:info@norteagestionturistica.es">info@norteagestionturistica.es</a>
+            </p>
+            <p>📞 <a href="tel:+34XXXXXXXXX">+34 XXX XXX XXX</a></p>
+          </div>
+          <div className="footer-social">
             <a href="#" className="social-link" aria-label="Instagram">
               Instagram
             </a>
-            <a href="#" className="social-link" aria-label="LinkedIn">
-              LinkedIn
+            <span>|</span>
+            <a href="#" className="social-link" aria-label="Facebook">
+              Facebook
             </a>
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 NORTEA GESTION LOGISTICA. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Nortea Gestión Turística. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

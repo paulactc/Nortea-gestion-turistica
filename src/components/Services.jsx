@@ -2,86 +2,79 @@ import React from "react";
 import "./Services.css";
 
 const Services = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Gestión de Reservas",
-      description:
-        "Optimizamos tus reservas en múltiples plataformas como Airbnb y Booking. Maximiza tu ocupación y tus ingresos con nuestra gestión profesional y calendar inteligente.",
-      icon: "📅",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070",
-    },
-    {
-      id: 2,
-      title: "Limpieza y Mantenimiento",
-      description:
-        "Sabemos que tu casa es tu tesoro, y la cuidamos como tal. Limpieza a fondo después de cada huésped, mantenimiento regular para que todo funcione perfectamente, y ojo avizor para detectar cualquier detallito antes de que se convierta en problema. Tus huéspedes siempre encontrarán todo impecable, como recién estrenado.",
-      icon: "✨",
-      image:
-        "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070",
-    },
-    {
-      id: 3,
-      title: "Atención al Huésped",
-      description:
-        "Estamos siempre disponibles para tus huéspedes, de día y de noche. Les ayudamos con el check-in, les contamos dónde está el mejor restaurante del pueblo, les recomendamos esa ruta de senderismo que no sale en las guías, y si surge cualquier cosa, lo solucionamos al momento. Tratamos a cada huésped como nos gustaría que nos trataran a nosotros. Así conseguimos que se vayan encantados y vuelvan con amigos.",
-      icon: "💬",
-      image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073",
-    },
-    {
-      id: 4,
-      title: "Marketing y Fotografía",
-      description:
-        "Vamos a hacer que tu alojamiento brille. Fotos preciosas que hagan justicia a tu espacio, textos que enganchen y den ganas de reservar ya, y un posicionamiento que haga que te encuentren fácilmente. No se trata de ser el más barato, sino el que más apetece. Queremos que cuando alguien vea tu alojamiento piense: Quiero ir!.",
-      icon: "📸",
-      image:
-        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070",
-    },
-    {
-      id: 5,
-      title: "Gestión Financiera",
-      description:
-        "Nada de sorpresas ni letra pequeña. Cada mes te mandamos un informe clarito con todo: cuánto has ganado, en qué se ha gastado, cómo va la rentabilidad. Todo a la vista. Y si ves algo raro o quieres optimizar algo, hablamos y buscamos la mejor solución juntos. Tus resultados son nuestros resultados y  queremos que lo veas crecer mes a mes.",
-      icon: "💰",
-      image:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011",
-    },
-    {
-      id: 6,
-      title: "Experiencia de Bienvenida que Enamora",
-      description:
-        "El primer momento marca la diferencia. Recibimos a cada huésped con un kit de bienvenida cuidadosamente seleccionado: productos locales auténticos, una guía personalizada de la zona con nuestras recomendaciones favoritas, y esos pequeños detalles que sorprenden y emocionan. Creamos experiencias que los viajeros querrán compartir, recordar y repetir. Valoraciones excepcionales garantizadas.",
-      icon: "🎁",
-      image:
-        "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=2070",
-    },
+  const onlineServices = [
+    "Gestión de reservas. Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado.",
+    "Registro de viajeros. Emisión y envío online conforme a la normativa vigente.",
+    "Creación y gestión del perfil de Google. Te posicionamos en las búsquedas locales.",
+    "Optimización de anuncios. Evaluamos y mejoramos tus anuncios en Booking, Airbnb y otros portales, con textos y fotos optimizadas.",
+    "Precios dinámicos. Ajustes diarios según demanda, ocupación, eventos locales y competencia.",
+    "Análisis de huéspedes. Estadísticas de ocupación y rendimiento, explicadas de forma clara.",
+    "Reputación online. Respuesta profesional y cercana a todas las reseñas.",
+    "Atención al huésped 360°. Comunicación constante desde el primer contacto hasta el check-out, con guías prácticas y recomendaciones locales.",
+    "Información turística local. Rutas, planes y consejos reales para mejorar la experiencia del viajero.",
+  ];
+
+  const flexibleServices = [
+    "Facturación segura (VeriFactu). Emisión de facturas con software homologado por la Agencia Tributaria.",
+    "Limpieza profesional. Coordinación integral y control de calidad: tu alojamiento impecable en cada estancia.",
+    "Lavandería y lencería. Gestión del cambio y stock de ropa de cama y baño, con control de plazos y calidad.",
+    "Check-in / Check-out digitalizados. Procesos de llegada y salida ágiles, con revisión del estado del alojamiento tras la salida de cada huésped.",
+    "Mantenimiento básico. Solución de pequeñas incidencias y coordinación con oficios.",
+    "Fotografías atractivas y visuales. Mostramos el alma de tu alojamiento para destacar frente a la competencia.",
   ];
 
   return (
     <section className="services" id="servicios">
       <div className="services-container">
-        <h2 className="services-title">Nuestros Servicios</h2>
-        <p className="services-intro">
-          Soluciones completas para la gestión de tu propiedad turística
-        </p>
-        <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="service-card__image-wrapper">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="service-card__image"
-                />
-              </div>
-              <div className="service-card__content">
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-              </div>
-            </div>
-          ))}
+        <h1 className="services-main-title">Nuestros servicios</h1>
+
+        {/* Gestión Online */}
+        <div className="service-section">
+          <h2 className="service-section__title">Gestión Online</h2>
+          <p className="service-section__description">
+            La opción ideal para propietarios que quieren optimizar la rentabilidad
+            de su alojamiento sin complicarse.
+          </p>
+          <p className="service-section__description">
+            Nos ocupamos de toda la parte digital, mejorando la visibilidad, la
+            reputación y la conversión de tus anuncios.
+          </p>
+
+          <h3 className="service-section__subtitle">Incluye:</h3>
+          <ul className="service-section__list">
+            {onlineServices.map((service, index) => (
+              <li key={index} className="service-section__list-item">
+                {service}
+              </li>
+            ))}
+          </ul>
+
+          <button className="service-section__cta">
+            Quiero la gestión online
+          </button>
+        </div>
+
+        {/* Gestión Flexible */}
+        <div className="service-section service-section--flexible">
+          <h2 className="service-section__title">Gestión Flexible</h2>
+          <p className="service-section__description">
+            Nos adaptamos a las necesidades de cada propietario, ofreciendo servicios
+            adicionales que completan la gestión online y te permiten delegar solo lo
+            que necesites.
+          </p>
+
+          <h3 className="service-section__subtitle">Servicios disponibles:</h3>
+          <ul className="service-section__list">
+            {flexibleServices.map((service, index) => (
+              <li key={index} className="service-section__list-item">
+                {service}
+              </li>
+            ))}
+          </ul>
+
+          <button className="service-section__cta service-section__cta--secondary">
+            Solicitar una propuesta personalizada
+          </button>
         </div>
       </div>
     </section>

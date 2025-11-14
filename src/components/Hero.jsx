@@ -8,22 +8,22 @@ const Hero = () => {
       <div className="hero__container">
         <div className="hero__content">
           <h1 className="hero__title">
-            Gestión profesional de alojamientos turísticos en Asturias
+            Gestión profesional<br />
+            Alojamientos turísticos
           </h1>
+          <h2 className="hero__location">
+            ASTURIAS
+          </h2>
           <p className="hero__subtitle">
-            Nos ocupamos de cada detalle para que tu alojamiento funcione con
-            eficacia, calidad y resultados.
+            Cuidamos de tu alojamiento como si fuera nuestro
           </p>
-          <p className="hero__intro">
-            Impulsamos tu alojamiento con una gestión eficiente, transparente y
-            cuidada, combinando cercanía y profesionalidad en cada detalle.
-          </p>
+
           <div className="hero__cta-group">
             <button className="hero__cta hero__cta--primary">
-              Consultanos
+              Quiero mejorar mi alojamiento
             </button>
             <button className="hero__cta hero__cta--secondary">
-              Ver Servicios
+              Ver servicios
             </button>
           </div>
         </div>
