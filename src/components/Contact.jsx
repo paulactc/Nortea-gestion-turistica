@@ -5,10 +5,11 @@ const Contact = () => {
   return (
     <section className="contact" id="contacto">
       <div className="contact-container">
-        <h1 className="contact-main-title">Hablemos de tu alojamiento</h1>
+        <h1 className="contact-main-title">Cuéntanos sobre tu alojamiento</h1>
         <p className="contact-intro">
-          Rellena el formulario y te contactaremos en menos de 24 h para ofrecerte
-          una evaluación gratuita y sin compromiso.
+            Solo necesitamos lo básico: dónde está y qué te gustaría delegar.
+            Escríbenos y nos pondremos en contacto contigo para verlo juntos.
+           
         </p>
 
         <div className="contact-form-wrapper">
@@ -53,33 +54,14 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label className="checkbox-group-label">¿Qué necesitas?</label>
-              <div className="checkbox-group">
-                <label className="checkbox-label">
-                  <input type="checkbox" name="services" value="online" />
-                  <span>Gestión Online</span>
-                </label>
-                <label className="checkbox-label">
-                  <input type="checkbox" name="services" value="limpieza" />
-                  <span>Limpieza</span>
-                </label>
-                <label className="checkbox-label">
-                  <input type="checkbox" name="services" value="lavanderia" />
-                  <span>Lavandería</span>
-                </label>
-                <label className="checkbox-label">
-                  <input type="checkbox" name="services" value="checkin" />
-                  <span>Check-in/out</span>
-                </label>
-                <label className="checkbox-label">
-                  <input type="checkbox" name="services" value="facturacion" />
-                  <span>Facturación VeriFactu</span>
-                </label>
-                <label className="checkbox-label">
-                  <input type="checkbox" name="services" value="otro" />
-                  <span>Otro</span>
-                </label>
-              </div>
+              <label className="checkbox-group-label">¿Cuentanos que necesitas?</label>
+              <input
+                  type="text"
+                  id="type"
+                  name="type"
+                
+                  required
+                />
             </div>
 
             <button type="submit" className="submit-btn">

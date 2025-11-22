@@ -3,24 +3,75 @@ import "./Services.css";
 
 const Services = () => {
   const onlineServices = [
-    "Gestión de reservas. Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado.",
-    "Registro de viajeros. Emisión y envío online conforme a la normativa vigente.",
-    "Creación y gestión del perfil de Google. Te posicionamos en las búsquedas locales.",
-    "Optimización de anuncios. Evaluamos y mejoramos tus anuncios en Booking, Airbnb y otros portales, con textos y fotos optimizadas.",
-    "Precios dinámicos. Ajustes diarios según demanda, ocupación, eventos locales y competencia.",
-    "Análisis de huéspedes. Estadísticas de ocupación y rendimiento, explicadas de forma clara.",
-    "Reputación online. Respuesta profesional y cercana a todas las reseñas.",
-    "Atención al huésped 360°. Comunicación constante desde el primer contacto hasta el check-out, con guías prácticas y recomendaciones locales.",
-    "Información turística local. Rutas, planes y consejos reales para mejorar la experiencia del viajero.",
+    {
+      icon: "📅",
+      title: "Gestión de reservas",
+      description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado."
+    },
+    {
+      icon: "📋",
+      title: "Registro de viajeros",
+      description: "Emisión y envío online conforme a la normativa vigente."
+    },
+    {
+      icon: "🔍",
+      title: "Perfil de Google",
+      description: "Creación y gestión del perfil para posicionarte en búsquedas locales."
+    },
+    {
+      icon: "✨",
+      title: "Optimización de anuncios",
+      description: "Mejoramos tus anuncios en Booking, Airbnb y otros portales con textos y fotos optimizadas."
+    },
+    {
+      icon: "📊",
+      title: "Precios dinámicos",
+      description: "Ajustes diarios según demanda, ocupación, eventos locales y competencia."
+    },
+    {
+      icon: "📈",
+      title: "Análisis de huéspedes",
+      description: "Estadísticas de ocupación y rendimiento, explicadas de forma clara."
+    },
+    {
+      icon: "⭐",
+      title: "Reputación online",
+      description: "Respuesta profesional y cercana a todas las reseñas."
+    },
+    {
+      icon: "💬",
+      title: "Atención al huésped 360°",
+      description: "Comunicación constante desde el primer contacto hasta el check-out, con guías y recomendaciones."
+    },
+    {
+      icon: "🗺️",
+      title: "Información turística",
+      description: "Rutas, planes y consejos reales para mejorar la experiencia del viajero."
+    },
   ];
 
   const flexibleServices = [
-    "Facturación segura (VeriFactu). Emisión de facturas con software homologado por la Agencia Tributaria.",
-    "Limpieza profesional. Coordinación integral y control de calidad: tu alojamiento impecable en cada estancia.",
-    "Lavandería y lencería. Gestión del cambio y stock de ropa de cama y baño, con control de plazos y calidad.",
-    "Check-in / Check-out digitalizados. Procesos de llegada y salida ágiles, con revisión del estado del alojamiento tras la salida de cada huésped.",
-    "Mantenimiento básico. Solución de pequeñas incidencias y coordinación con oficios.",
-    "Fotografías atractivas y visuales. Mostramos el alma de tu alojamiento para destacar frente a la competencia.",
+    {
+      icon: "🧾",
+      title: "Facturación segura",
+      description: "Emisión de facturas con software homologado por la Agencia Tributaria (VeriFactu)."
+    },
+    
+    {
+      icon: "🔑",
+      title: "Check-in / Check-out",
+      description: "Procesos digitalizados de llegada y salida ágiles, con revisión del estado del alojamiento."
+    },
+    {
+      icon: "🔧",
+      title: "Mantenimiento básico",
+      description: "Solución de pequeñas incidencias y coordinación con oficios."
+    },
+    {
+      icon: "📸",
+      title: "Fotografía profesional",
+      description: "Mostramos el alma de tu alojamiento para destacar frente a la competencia."
+    },
   ];
 
   return (
@@ -30,51 +81,61 @@ const Services = () => {
 
         {/* Gestión Online */}
         <div className="service-section">
-          <h2 className="service-section__title">Gestión Online</h2>
-          <p className="service-section__description">
-            La opción ideal para propietarios que quieren optimizar la rentabilidad
-            de su alojamiento sin complicarse.
-          </p>
-          <p className="service-section__description">
-            Nos ocupamos de toda la parte digital, mejorando la visibilidad, la
-            reputación y la conversión de tus anuncios.
-          </p>
+          <div className="service-section__header">
+            <h2 className="service-section__title">Gestión Online</h2>
+            <p className="service-section__description">
+              La opción ideal para propietarios que quieren optimizar la rentabilidad
+              de su alojamiento sin complicarse. Nos ocupamos de toda la parte digital.
+            </p>
+          </div>
 
-          <h3 className="service-section__subtitle">Incluye:</h3>
-          <ul className="service-section__list">
+          <div className="service-section__grid">
             {onlineServices.map((service, index) => (
-              <li key={index} className="service-section__list-item">
-                {service}
-              </li>
+              <div key={index} className="service-card">
+                <div className="service-card__icon">{service.icon}</div>
+                <div className="service-card__content">
+                  <h4 className="service-card__title">{service.title}</h4>
+                  <p className="service-card__description">{service.description}</p>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
 
-          <button className="service-section__cta">
-            Quiero la gestión online
-          </button>
+          <div className="service-section__footer">
+            <a href="#contacto" className="service-section__cta">
+              Quiero la gestión online
+            </a>
+          </div>
         </div>
 
         {/* Gestión Flexible */}
         <div className="service-section service-section--flexible">
-          <h2 className="service-section__title">Gestión Flexible</h2>
-          <p className="service-section__description">
-            Nos adaptamos a las necesidades de cada propietario, ofreciendo servicios
-            adicionales que completan la gestión online y te permiten delegar solo lo
-            que necesites.
-          </p>
+          <div className="service-section__header">
+            <span className="service-section__badge service-section__badge--secondary">Servicios adicionales</span>
+            <h2 className="service-section__title">Gestión Flexible</h2>
+            <p className="service-section__description">
+              Servicios complementarios que puedes añadir según tus necesidades.
+              Personaliza tu plan de gestión.
+            </p>
+          </div>
 
-          <h3 className="service-section__subtitle">Servicios disponibles:</h3>
-          <ul className="service-section__list">
+          <div className="service-section__grid service-section__grid--small">
             {flexibleServices.map((service, index) => (
-              <li key={index} className="service-section__list-item">
-                {service}
-              </li>
+              <div key={index} className="service-card service-card--compact">
+                <div className="service-card__icon">{service.icon}</div>
+                <div className="service-card__content">
+                  <h4 className="service-card__title">{service.title}</h4>
+                  <p className="service-card__description">{service.description}</p>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
 
-          <button className="service-section__cta service-section__cta--secondary">
-            Solicitar una propuesta personalizada
-          </button>
+          <div className="service-section__footer">
+            <button className="service-section__cta service-section__cta--secondary">
+              Personalizar mi plan
+            </button>
+          </div>
         </div>
       </div>
     </section>

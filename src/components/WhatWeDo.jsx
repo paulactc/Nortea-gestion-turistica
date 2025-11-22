@@ -7,9 +7,8 @@ const WhatWeDo = () => {
       <div className="what-we-do__container">
         <h2 className="what-we-do__title">Qué hacemos</h2>
         <p className="what-we-do__description">
-          Gestionamos tu alojamiento con procesos profesionales y trato cercano:
-          más ocupación, precios optimizados y huéspedes atendidos de principio a fin,
-          sin que tengas que preocuparte de nada.
+          Gestionamos alojamientos rurales en Asturias con profesionalidad y trato cercano.
+          Ponemos en valor tu alojamiento,acompañamos a tus huéspedes y te ayudamos a aumentar las reservas sin perder la esencia del lugar de forma sencilla.
         </p>
 
         <div className="what-we-do__features">
@@ -18,7 +17,7 @@ const WhatWeDo = () => {
               ⏰
             </div>
             <p className="what-we-do__feature-text">
-              +10 años gestionando alojamientos en Asturias
+              Mas de 10 años gestionando alojamientos en Asturias
             </p>
           </div>
 
@@ -49,6 +48,10 @@ const WhatWeDo = () => {
             </p>
           </div>
         </div>
+
+        <a href="#servicios" className="what-we-do__cta">
+          Ver servicios
+        </a>
       </div>
     </section>
   );

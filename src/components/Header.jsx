@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import logo from "../assets/Logo.jpeg";
+import logo from "../assets/Logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,10 +30,18 @@ const Header = () => {
         <div className="header__logo">
           <img
             src={logo}
-            alt="NORTEA GESTION LOGISTICA"
+            alt="NORTEA GESTION TURÍSITICA"
             className="header__logo-image"
           />
-          <span className="header__logo-text">NORTEA GESTION LOGISTICA</span>
+          <span className="header__logo-text">NORTEA GESTION TURÍSTICA</span>
+        </div>
+
+        <div className="header__phone">
+          <span className="header__phone-icon">📞</span>
+          <div className="header__phone-info">
+            <span className="header__phone-number">653649789</span>
+            <span className="header__phone-label">llámanos</span>
+          </div>
         </div>
 
         <button
@@ -58,49 +66,14 @@ const Header = () => {
               </a>
             </li>
 
-            <li className="header__nav-item header__nav-item--dropdown">
-              <button
-                className="header__nav-link header__nav-link--dropdown"
-                onClick={() => toggleDropdown("servicios")}
+            <li className="header__nav-item">
+              <a
+                href="#servicios"
+                className="header__nav-link"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Servicios
-                <span className="header__dropdown-arrow">▼</span>
-              </button>
-              <ul
-                className={`header__dropdown ${
-                  activeDropdown === "servicios" ? "active" : ""
-                }`}
-              >
-                <li>
-                  <a
-                    href="#gestion-reservas"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Gestión de Reservas
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#limpieza-mantenimiento"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Limpieza y Mantenimiento
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#gestion-integral"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Gestión Integral
-                  </a>
-                </li>
-                <li>
-                  <a href="#marketing" onClick={() => setIsMenuOpen(false)}>
-                    Marketing y Promoción
-                  </a>
-                </li>
-              </ul>
+              </a>
             </li>
 
             <li className="header__nav-item">
@@ -109,17 +82,7 @@ const Header = () => {
                 className="header__nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Sobre Nosotros
-              </a>
-            </li>
-
-            <li className="header__nav-item">
-              <a
-                href="#alojamientos"
-                className="header__nav-link"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Alojamientos
+                Nuestra mirada
               </a>
             </li>
 
@@ -133,10 +96,6 @@ const Header = () => {
               </a>
             </li>
           </ul>
-
-          <button className="header__cta" onClick={() => setIsMenuOpen(false)}>
-            Consultanos
-          </button>
         </nav>
       </div>
     </header>

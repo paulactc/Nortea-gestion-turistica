@@ -1,20 +1,28 @@
 import React from "react";
 import "./About.css";
+import imagenFondo from "../assets/imagen.jpg";
 
 const About = () => {
   return (
-    <section className="about" id="nosotros">
+    <section
+      className="about"
+      id="nosotros"
+      style={{ backgroundImage: `url(${imagenFondo})` }}
+    >
       <div className="about-container">
         <div className="about-content">
-          <h2 className="about-title">Nuestro sello</h2>
+          <h2 className="about-title">Nuestra mirada</h2>
           <p className="about-intro-main">
-            Operamos en el Oriente de Asturias y conocemos de primera mano el
-            comportamiento del mercado, las temporadas, los huéspedes y lo que
-            realmente funciona.
+            En Nortea creemos que la gestión turística no es solo cuestión de calendarios y plataformas.
+            Es acompañar lugares que tiene alma y hacer que quienes llegan puedan disfrutar del lugar como merecen.
           </p>
           <p className="about-intro-main">
-            Unimos datos, experiencia y cercanía local para ofrecer una gestión
-            profesional con alma.
+            Nuestra forma de trabajar es sencilla: cercanía,organización y cuidado de cada detalle.
+            Observamos cada alojamiento como un espacio único,
+            con su luz, su historía y su forma de ser vivido.
+          </p>
+          <p className="about-intro-main">
+            Nuestro papel es cuidar esa esencia y hacer que llegue a las personas adecuadas.
           </p>
 
           <h3 className="about-subtitle">Lo que nos caracteriza</h3>
@@ -48,13 +56,7 @@ const About = () => {
                 comunicación constante.
               </p>
             </div>
-            <div className="feature">
-              <h4 className="feature-title">Flexibilidad absoluta</h4>
-              <p className="feature-description">
-                Nos adaptamos al tipo de gestión, propiedad y nivel de
-                implicación que desees.
-              </p>
-            </div>
+            
           </div>
         </div>
       </div>

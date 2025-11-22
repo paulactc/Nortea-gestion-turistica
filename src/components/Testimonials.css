@@ -32,7 +32,7 @@
 }
 
 .testimonials__subtitle {
-  color: #8FAEA3;
+  color: #3c3c3b;
   font-weight: 600;
   font-size: 1rem;
   text-transform: uppercase;
@@ -46,15 +46,16 @@
 
 .testimonials__title {
   font-size: 2.8rem;
-  font-weight: 700;
-  color: #3b7c3a;
+  font-weight: 200;
+  color: #3c3c3b;
   margin-bottom: 20px;
   letter-spacing: -0.5px;
+  font-family: Georgia;
 }
 
 .testimonials__description {
   font-size: 1.2rem;
-  color: #3b7c3a;
+  color: #3c3c3b;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;
@@ -144,7 +145,7 @@
 
 .testimonial-card__text {
   font-size: 1.05rem;
-  color: #3b7c3a;
+  color: #3c3c3b;
   line-height: 1.8;
   margin-bottom: 25px;
   font-style: italic;
@@ -166,7 +167,7 @@
 }
 
 .testimonial-card:hover .testimonial-card__avatar {
-  border-color: #66bb6a;
+  border-color: #3c3c3b;
   transform: scale(1.1);
 }
 
@@ -177,13 +178,13 @@
 .testimonial-card__name {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2e7d32;
+  color: #3c3c3b;
   margin-bottom: 5px;
 }
 
 .testimonial-card__role {
   font-size: 0.9rem;
-  color: #66bb6a;
+  color: #3c3c3b;
   font-weight: 500;
 }
 

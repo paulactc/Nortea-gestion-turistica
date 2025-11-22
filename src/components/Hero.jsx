@@ -8,23 +8,23 @@ const Hero = () => {
       <div className="hero__container">
         <div className="hero__content">
           <h1 className="hero__title">
-            Gestión profesional<br />
-            Alojamientos turísticos
+            Gestión Profesional<br />
+            Alojamientos Turísticos
           </h1>
           <h2 className="hero__location">
             ASTURIAS
           </h2>
           <p className="hero__subtitle">
-            Cuidamos de tu alojamiento como si fuera nuestro
+            La tranquilidad de una gestión cuidada.
           </p>
 
           <div className="hero__cta-group">
-            <button className="hero__cta hero__cta--primary">
+            <a href="#contacto" className="hero__cta hero__cta--primary">
               Quiero mejorar mi alojamiento
-            </button>
-            <button className="hero__cta hero__cta--secondary">
+            </a>
+            <a href="#servicios" className="hero__cta hero__cta--secondary">
               Ver servicios
-            </button>
+            </a>
           </div>
         </div>
       </div>

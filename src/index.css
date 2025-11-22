@@ -14,7 +14,7 @@
   --color-text-dark: #3b7c3a;
   --color-text-light: #8FAEA3;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: inherit;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -29,17 +29,36 @@
   box-sizing: border-box;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--color-cream);
-  color: var(--color-text-dark);
+  color: #3c3c3b;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, label, small {
+  color: #3c3c3b;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
 }
 
 .app {
+  width: 100%;
   min-height: 100vh;
   background-color: var(--color-cream);
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -58,4 +77,21 @@ button {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Textos pequeños con sans-serif */
+p,
+span,
+li,
+label,
+small,
+.description,
+.feature-description,
+.about-intro-main,
+.about-intro,
+.step-description,
+.service-description,
+.testimonial-text,
+.contact-info {
+  font-family:inherit
 }

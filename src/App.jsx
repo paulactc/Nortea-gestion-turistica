@@ -7,6 +7,7 @@ import About from "./components/About";
 import HowWeWork from "./components/HowWeWork";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <HowWeWork />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
