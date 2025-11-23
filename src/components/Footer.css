@@ -222,6 +222,8 @@
 @media (max-width: 576px) {
   .footer-top {
     padding: 50px 0;
+    background-size: cover;
+    background-position: center;
   }
 
   .footer-container {

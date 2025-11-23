@@ -5,33 +5,33 @@ const HowWeWork = () => {
   const steps = [
     {
       number: "1",
-      icon: "🎯",
-      title: "Evaluación gratuita de tu alojamiento",
-      description: "Analizamos tu presencia online, precios, fotos y reputación.",
+      icon: "🗣️",
+      title: "Primera conversación",
+      description: "Hablamos contigo para entender tu alojamiento,tu situacción actual y lo que quieres mejorar.",
     },
     {
       number: "2",
-      icon: "💡",
-      title: "Propuesta personalizada",
-      description: "Te presentamos mejoras y un plan adaptado a tu alojamiento.",
+      icon: "🏡",
+      title: "Visita al alojamiento",
+      description: "Vamos a verlo en persona.Tomamos nota de puntos fuertes,detalles a mejorar y necesidades reales.",
     },
     {
       number: "3",
-      icon: "🏁",
-      title: "Puesta en marcha",
-      description: "Optimizamos anuncios, creamos tu perfil de Google y activamos los canales.",
+      icon: "🗎✔️",
+      title: "Revisión y propuesta",
+      description: "Analizamos los anuncios, la etrategía de precios y la forma en que tu alojamiento aparece en las plataformas. A partir de ahí te presentamos una propuesta sencilla ,sensata y adaptada a tu caso. ",
     },
     {
       number: "4",
-      icon: "🔄",
-      title: "Gestión continua",
-      description: "Nos ocupamos de la operativa diaria, atención al huésped y precios dinámicos.",
+      icon: "🔝",
+      title: "Puesta a punto",
+      description: "Actualizamos textos,imagenes,precios y calendario.Dejamos lista la comunicación con huespedes y el check-in on-line",
     },
     {
       number: "5",
-      icon: "📈",
-      title: "Seguimiento constante",
-      description: "Informes periódicos y comunicación directa contigo para ajustar estrategias.",
+      icon: "🤝",
+      title: "Gestión diaria",
+      description: "Tu mantienes el espacio y nosotros cuidamos la gestión , la visibilidad y la experiencia.",
     },
   ];
 

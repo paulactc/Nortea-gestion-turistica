@@ -8,6 +8,11 @@ const Services = () => {
       title: "Gestión de reservas",
       description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado."
     },
+      {
+      icon: "🧾",
+      title: "Facturación Verifactu integrada",
+      description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado."
+    },
     {
       icon: "📋",
       title: "Registro de viajeros",
@@ -28,11 +33,7 @@ const Services = () => {
       title: "Precios dinámicos",
       description: "Ajustes diarios según demanda, ocupación, eventos locales y competencia."
     },
-    {
-      icon: "📈",
-      title: "Análisis de huéspedes",
-      description: "Estadísticas de ocupación y rendimiento, explicadas de forma clara."
-    },
+    
     {
       icon: "⭐",
       title: "Reputación online",
@@ -52,25 +53,25 @@ const Services = () => {
 
   const flexibleServices = [
     {
-      icon: "🧾",
-      title: "Facturación segura",
-      description: "Emisión de facturas con software homologado por la Agencia Tributaria (VeriFactu)."
+      icon: "✔️",
+      title: "Organización",
+      description: "Avisamos, cuadramos y confirmamos con tus proveedores."
     },
     
     {
-      icon: "🔑",
-      title: "Check-in / Check-out",
-      description: "Procesos digitalizados de llegada y salida ágiles, con revisión del estado del alojamiento."
+      icon: "🧩",
+      title: "Coordinación",
+      description: "Coordinamos limpieza,lavandería y horarios de entrada/salida."
     },
     {
-      icon: "🔧",
-      title: "Mantenimiento básico",
-      description: "Solución de pequeñas incidencias y coordinación con oficios."
+      icon: "🔎",
+      title: "Seguimiento",
+      description: "Seguimos el calendario operativo para que nada quede suelto."
     },
     {
-      icon: "📸",
-      title: "Fotografía profesional",
-      description: "Mostramos el alma de tu alojamiento para destacar frente a la competencia."
+      icon: "👁️‍🗨️",
+      title: "Supervisión",
+      description: "Sin ejecucción física , solo organización, avisos y seguimientos"
     },
   ];
 
@@ -114,8 +115,7 @@ const Services = () => {
             <span className="service-section__badge service-section__badge--secondary">Servicios adicionales</span>
             <h2 className="service-section__title">Gestión Flexible</h2>
             <p className="service-section__description">
-              Servicios complementarios que puedes añadir según tus necesidades.
-              Personaliza tu plan de gestión.
+              Para propietarios que ya cuentan con limpieza y lavandería y necesitan que todo encaje.
             </p>
           </div>
 

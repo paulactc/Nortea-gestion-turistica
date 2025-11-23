@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(234, 236, 236, 0.7);
+  background: rgba(234, 200, 200, 0.5);
   z-index: 0;
 }
 
@@ -340,7 +340,7 @@
 .about-title {
   font-size: 2.8rem;
   font-weight: 200;
-  color: #3c3c3b;
+  color: #000000;
   margin-bottom: 30px;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -364,7 +364,7 @@
 
 .about-intro {
   font-size: 1.15rem;
-  color: #3c3c3b;
+  color: #000000;
   line-height: 1.8;
   margin-bottom: 20px;
   font-family: inherit;
@@ -373,7 +373,7 @@
 
 .about-intro-main {
   font-size: 1.2rem;
-  color: #3c3c3b;
+  color: #000000;
   line-height: 1.5;
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
@@ -383,9 +383,9 @@
 }
 
 .about-subtitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 200;
-  color: #3c3c3b;
+  color: #000000;
   margin-top: 50px;
   margin-bottom: 40px;
   text-align: center;
@@ -412,6 +412,56 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #444444;
   transition: all 0.3s ease;
+}
+
+/* Responsive para features */
+@media (max-width: 768px) {
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-features .feature:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+
+  .feature {
+    padding: 20px;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature {
+    padding: 15px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .about-subtitle {
+    font-size: 1.4rem;
+  }
 }
 
 .feature:hover {

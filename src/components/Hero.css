@@ -70,19 +70,23 @@
 }
 
 .hero__location {
-  font-size: 3rem;
-  font-weight: 30;
+  font-size: 2.2rem;
+  font-weight: 500;
   color: white;
   line-height: 1;
-  margin-bottom: 0px;
-  letter-spacing: 8px;
-  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8), 0 6px 25px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+  margin-top: 15px;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease-out 0.4s backwards;
   font-family: 'Montserrat', 'Arial', sans-serif;
   text-transform: uppercase;
   background: rgba(143, 174, 163, 0.6);
   padding: 10px 25px;
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero__subtitle {
@@ -210,7 +214,7 @@
   }
 
   .hero__location {
-    font-size: 4rem;
+    font-size: 1em;
     letter-spacing: 6px;
   }
 
@@ -269,8 +273,9 @@
   }
 
   .hero__location {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     letter-spacing: 3px;
+    padding: 8px 15px;
   }
 
   .hero__subtitle {

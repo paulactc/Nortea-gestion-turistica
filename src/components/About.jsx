@@ -25,7 +25,7 @@ const About = () => {
             Nuestro papel es cuidar esa esencia y hacer que llegue a las personas adecuadas.
           </p>
 
-          <h3 className="about-subtitle">Lo que nos caracteriza</h3>
+          <h3 className="about-subtitle">Lo que nos mueve</h3>
 
           <div className="about-features">
             <div className="feature">
