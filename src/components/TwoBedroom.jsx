@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Users, Bed, Bath, MapPin, Search, RotateCcw, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Users, Bed, Bath, MapPin, Search, RotateCcw, Phone, ArrowLeft } from "lucide-react";
 import "./Accommodations.css";
 
-const Accommodations = () => {
+const TwoBedroom = () => {
   const [filters, setFilters] = useState({
     guests: "",
     checkIn: "",
@@ -11,30 +12,6 @@ const Accommodations = () => {
   const [filteredAccommodations, setFilteredAccommodations] = useState(null);
 
   const accommodations = [
-    {
-      id: 1,
-      name: "El Balcón",
-      location: "Romillo, Parres - Asturias",
-      image: "https://www.laquintanaderomillo.es/wp-content/uploads/El-Balcon-2.webp",
-      guests: 3,
-      bedrooms: 1,
-      bathrooms: 1,
-      features: ["Cocina equipada", "Jardín privado", "Barbacoa", "Admite mascotas"],
-      description: "Acogedor apartamento de 1 dormitorio con todas las comodidades. Ideal para parejas o pequeñas familias.",
-      contact: "636 52 06 78",
-    },
-    {
-      id: 2,
-      name: "Picos de Europa",
-      location: "Romillo, Parres - Asturias",
-      image: "https://www.laquintanaderomillo.es/wp-content/uploads/apartamento-rural-picos-de-europa-la-quintana-de-romillo-3.webp",
-      guests: 3,
-      bedrooms: 1,
-      bathrooms: 1,
-      features: ["Cocina equipada", "Jardín privado", "Barbacoa", "Admite mascotas"],
-      description: "Apartamento con vistas espectaculares, perfecto para disfrutar de la naturaleza asturiana.",
-      contact: "636 52 06 78",
-    },
     {
       id: 3,
       name: "El Corredor",
@@ -107,13 +84,11 @@ const Accommodations = () => {
   const handleSearch = (e) => {
     e.preventDefault();
 
-    // Si no hay filtros seleccionados, mostrar todos
     if (!filters.guests && !filters.checkIn && !filters.checkOut) {
       setFilteredAccommodations(null);
       return;
     }
 
-    // Filtrar por número de huéspedes
     let results = accommodations;
 
     if (filters.guests) {
@@ -138,13 +113,16 @@ const Accommodations = () => {
   return (
     <section className="accommodations" id="alojamientos">
       <div className="accommodations__container">
+        <div className="accommodations__back">
+          <Link to="/alojamientos" className="accommodations__back-button">
+            <ArrowLeft size={20} /> Volver a categorías
+          </Link>
+        </div>
+
         <div className="accommodations__header">
-          <h2 className="accommodations__title">La Quintana de Romillo</h2>
+          <h2 className="accommodations__title">Apartamentos de 2 Dormitorios</h2>
           <p className="accommodations__description">
-            Siete apartamentos rurales independientes en Romillo, Parres.
-            Entre Cangas de Onís y los Picos de Europa. Cada apartamento cuenta con cocina equipada,
-            jardín privado y barbacoa. Disfruta de zonas comunes con granja, juegos infantiles y piscina.
-            ¡Admitimos mascotas!
+            Ideales para familias y grupos. Amplios espacios para disfrutar de una estancia confortable en plena naturaleza asturiana.
           </p>
         </div>
 
@@ -227,7 +205,7 @@ const Accommodations = () => {
                   className="accommodation-card__image"
                 />
                 <div className="accommodation-card__badge">
-                  {accommodation.bedrooms === 1 ? "1 Dormitorio" : "2 Dormitorios"}
+                  2 Dormitorios
                 </div>
               </div>
               <div className="accommodation-card__content">
@@ -247,10 +225,10 @@ const Accommodations = () => {
                     <Users size={16} /> {accommodation.guests} huéspedes
                   </span>
                   <span className="accommodation-card__detail">
-                    <Bed size={16} /> {accommodation.bedrooms} {accommodation.bedrooms === 1 ? "habitación" : "habitaciones"}
+                    <Bed size={16} /> {accommodation.bedrooms} habitaciones
                   </span>
                   <span className="accommodation-card__detail">
-                    <Bath size={16} /> {accommodation.bathrooms} {accommodation.bathrooms === 1 ? "baño" : "baños"}
+                    <Bath size={16} /> {accommodation.bathrooms} baño
                   </span>
                 </div>
                 <div className="accommodation-card__features">
@@ -277,4 +255,4 @@ const Accommodations = () => {
   );
 };
 
-export default Accommodations;
+export default TwoBedroom;

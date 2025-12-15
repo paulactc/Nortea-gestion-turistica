@@ -1,51 +1,65 @@
 import React from "react";
+import {
+  Calendar,
+  FileText,
+  ClipboardList,
+  Search,
+  Sparkles,
+  TrendingUp,
+  Star,
+  MessageSquare,
+  Map,
+  CheckCircle,
+  Puzzle,
+  Eye
+} from "lucide-react";
 import "./Services.css";
 
 const Services = () => {
   const onlineServices = [
     {
-      icon: "📅",
+      icon: <Calendar size={24} />,
       title: "Gestión de reservas",
       description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado."
     },
       {
-      icon: "🧾",
+      icon: <FileText size={24} />,
       title: "Facturación Verifactu integrada",
       description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado."
     },
     {
-      icon: "📋",
+      icon: <ClipboardList size={24} />,
       title: "Registro de viajeros",
       description: "Emisión y envío online conforme a la normativa vigente."
     },
     {
-      icon: "🔍",
+      icon: <Search size={24} />,
       title: "Perfil de Google",
       description: "Creación y gestión del perfil para posicionarte en búsquedas locales."
     },
     {
-      icon: "✨",
+      icon: <Sparkles size={24} />,
       title: "Optimización de anuncios",
       description: "Mejoramos tus anuncios en Booking, Airbnb y otros portales con textos y fotos optimizadas."
     },
     {
-      icon: "📊",
+      icon: <TrendingUp size={24} />,
       title: "Precios dinámicos",
       description: "Ajustes diarios según demanda, ocupación, eventos locales y competencia."
     },
-    
+
     {
-      icon: "⭐",
+      icon: <Star size={24} />,
       title: "Reputación online",
       description: "Respuesta profesional y cercana a todas las reseñas."
     },
     {
-      icon: "💬",
+      icon: <MessageSquare size={24} />,
       title: "Atención al huésped 360°",
       description: "Comunicación constante desde el primer contacto hasta el check-out, con guías y recomendaciones."
     },
     {
-      icon: "🗺️",
+      icon: <Map size={24} />,
       title: "Información turística",
       description: "Rutas, planes y consejos reales para mejorar la experiencia del viajero."
     },
@@ -53,23 +67,23 @@ const Services = () => {
 
   const flexibleServices = [
     {
-      icon: "✔️",
+      icon: <CheckCircle size={24} />,
       title: "Organización",
       description: "Avisamos, cuadramos y confirmamos con tus proveedores."
     },
-    
+
     {
-      icon: "🧩",
+      icon: <Puzzle size={24} />,
       title: "Coordinación",
       description: "Coordinamos limpieza,lavandería y horarios de entrada/salida."
     },
     {
-      icon: "🔎",
+      icon: <Search size={24} />,
       title: "Seguimiento",
       description: "Seguimos el calendario operativo para que nada quede suelto."
     },
     {
-      icon: "👁️‍🗨️",
+      icon: <Eye size={24} />,
       title: "Supervisión",
       description: "Sin ejecucción física , solo organización, avisos y seguimientos"
     },

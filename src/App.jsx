@@ -1,27 +1,29 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import WhatWeDo from "./components/WhatWeDo";
-import Services from "./components/Services";
-import About from "./components/About";
-import HowWeWork from "./components/HowWeWork";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Home from "./pages/Home";
+import CategorySelection from "./components/CategorySelection";
+import OneBedroom from "./components/OneBedroom";
+import TwoBedroom from "./components/TwoBedroom";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <Hero />
-      <WhatWeDo />
-      <Services />
-      <About />
-      <HowWeWork />
-      <Contact />
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/alojamientos" element={<><CategorySelection /><Contact /></>} />
+          <Route path="/alojamientos/1-dormitorio" element={<><OneBedroom /><Contact /></>} />
+          <Route path="/alojamientos/2-dormitorios" element={<><TwoBedroom /><Contact /></>} />
+        </Routes>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </Router>
   );
 }
 

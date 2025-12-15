@@ -11,6 +11,40 @@
   margin: 0 auto;
 }
 
+/* Back Button */
+.accommodations__back {
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.accommodations__back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: white;
+  color: #3c3c3b;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 2px solid #EAECEC;
+}
+
+.accommodations__back-button:hover {
+  background: #8FAEA3;
+  color: white;
+  border-color: #8FAEA3;
+  transform: translateX(-5px);
+  box-shadow: 0 6px 20px rgba(143, 174, 163, 0.3);
+}
+
+.accommodations__back-button svg {
+  flex-shrink: 0;
+}
+
 .accommodations__header {
   text-align: center;
   margin-bottom: 50px;
@@ -98,7 +132,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
+}
+
+.search-form__button svg {
+  flex-shrink: 0;
 }
 
 .search-form__button:hover {
@@ -108,6 +146,41 @@
 
 .search-form__button:active {
   transform: translateY(0);
+}
+
+.search-form__button--reset {
+  background: linear-gradient(135deg, #3c3c3b 0%, #555555 100%);
+}
+
+.search-form__button--reset:hover {
+  box-shadow: 0 6px 20px rgba(60, 60, 59, 0.4);
+}
+
+/* No Results Message */
+.accommodations__no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fafafa;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.accommodations__no-results p {
+  font-size: 1.2rem;
+  color: #3c3c3b;
+  margin-bottom: 25px;
+}
+
+/* Results Count */
+.accommodations__results-count {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.accommodations__results-count p {
+  font-size: 1.1rem;
+  color: #3c3c3b;
+  font-weight: 600;
 }
 
 /* Accommodations Grid */
@@ -193,7 +266,21 @@
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+}
+
+.accommodation-card__location svg {
+  color: #8FAEA3;
+  flex-shrink: 0;
+}
+
+.accommodation-card__description {
+  font-size: 1rem;
+  color: #3c3c3b;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #EAECEC;
 }
 
 .accommodation-card__details {
@@ -210,7 +297,12 @@
   color: #3c3c3b;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+}
+
+.accommodation-card__detail svg {
+  color: #8FAEA3;
+  flex-shrink: 0;
 }
 
 .accommodation-card__features {
@@ -233,9 +325,9 @@
 .accommodation-card__footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 15px;
-  margin-bottom: 12px;
+  margin-top: 20px;
 }
 
 .accommodation-card__price {
@@ -271,6 +363,15 @@
   font-family: inherit;
   white-space: nowrap;
   box-shadow: 0 4px 15px rgba(143, 174, 163, 0.25);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.accommodation-card__button svg {
+  flex-shrink: 0;
 }
 
 .accommodation-card__button:hover {
