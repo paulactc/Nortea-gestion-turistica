@@ -38,13 +38,29 @@
   margin: 0 auto;
   padding: 0 30px;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__text-wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+.hero__buttons-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 50px;
 }
 
 .hero__content {
   max-width: 800px;
   margin: 0 auto;
   animation: fadeInUp 1s ease-out;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -233,23 +249,51 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 100vh;
+    align-items: stretch;
+  }
+
+  .hero__container {
+    padding: 80px 20px 40px;
+    width: 100%;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px);
+  }
+
+  .hero__text-wrapper {
+    padding-top: 0;
+    margin-top: -20px;
+  }
+
+  .hero__buttons-wrapper {
+    margin-top: auto;
+    padding-bottom: 40px;
   }
 
   .hero__content {
-    padding-bottom: 100px;
+    padding-bottom: 0;
+    padding-top: 0;
+    max-width: 100%;
+    margin-top: 0;
   }
 
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    margin-top: 0;
   }
 
   .hero__location {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 4px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 8px 20px;
   }
 
   .hero__subtitle {
-    font-size: 1.1rem;
+    
+    margin-bottom: 0;
+    padding: 12px 20px;
   }
 
   .hero__features {
@@ -260,34 +304,49 @@
   .hero__cta-group {
     flex-direction: column;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 0;
   }
 
   .hero__cta {
     width: 100%;
     text-align: center;
     justify-content: center;
-  }
-
-  .hero__container {
-    padding: 0 20px;
+    padding: 15px 30px;
   }
 }
 
 @media (max-width: 576px) {
+  .hero__container {
+    padding: 70px 20px 30px;
+  }
+
+  .hero__text-wrapper {
+    padding-top: 0;
+    margin-top: -30px;
+  }
+
+  .hero__buttons-wrapper {
+    padding-bottom: 50px;
+  }
+
   .hero__title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    margin-top: 0;
   }
 
   .hero__location {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     letter-spacing: 3px;
-    padding: 8px 15px;
+    padding: 7px 15px;
+    margin-bottom: 6px;
+    margin-top: 6px;
   }
 
   .hero__subtitle {
-    font-size: 1rem;
-    margin-bottom: 25px;
+    
+    margin-bottom: 0;
+    padding: 10px 15px;
   }
 
   .hero__badge {
@@ -296,8 +355,8 @@
   }
 
   .hero__cta {
-    padding: 14px 32px;
-    font-size: 1rem;
+    padding: 13px 28px;
+    font-size: 0.95rem;
   }
 
   .hero::after {

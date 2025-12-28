@@ -7,8 +7,6 @@ import {
   Sparkles,
   TrendingUp,
   Star,
-  MessageSquare,
-  Map,
   CheckCircle,
   Puzzle,
   Eye
@@ -60,18 +58,7 @@ const Services = () => {
       description: "Respuesta profesional y cercana a todas las reseñas.",
       color: "gold"
     },
-    {
-      icon: <MessageSquare size={24} />,
-      title: "Atención al huésped 360°",
-      description: "Comunicación constante desde el primer contacto hasta el check-out, con guías y recomendaciones.",
-      color: "coral"
-    },
-    {
-      icon: <Map size={24} />,
-      title: "Información turística",
-      description: "Rutas, planes y consejos reales para mejorar la experiencia del viajero.",
-      color: "green"
-    },
+   
   ];
 
   const flexibleServices = [
@@ -136,34 +123,8 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Gestión Flexible */}
-        <div className="service-section service-section--flexible">
-          <div className="service-section__header">
-            <span className="service-section__badge service-section__badge--secondary">Servicios adicionales</span>
-            <h2 className="service-section__title">Gestión Flexible</h2>
-            <p className="service-section__description">
-              Para propietarios que ya cuentan con limpieza y lavandería y necesitan que todo encaje.
-            </p>
-          </div>
-
-          <div className="service-section__grid service-section__grid--small">
-            {flexibleServices.map((service, index) => (
-              <div key={index} className="service-card service-card--compact">
-                <div className={`service-card__icon service-card__icon--${service.color}`}>{service.icon}</div>
-                <div className="service-card__content">
-                  <h4 className="service-card__title">{service.title}</h4>
-                  <p className="service-card__description">{service.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="service-section__footer">
-            <button className="service-section__cta service-section__cta--secondary">
-              Personalizar mi plan
-            </button>
-          </div>
-        </div>
+       
+       
       </div>
     </section>
   );

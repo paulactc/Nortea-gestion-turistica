@@ -36,137 +36,108 @@
   border-radius: 2px;
 }
 
-.how-we-work__steps {
-  position: relative;
+/* Carrusel infinito automático */
+.carousel {
+  overflow: hidden;
   margin-bottom: 60px;
-  padding-left: 50px;
+  padding: 20px 0;
 }
 
-/* Línea vertical del timeline */
-.how-we-work__steps::before {
-  content: '';
-  position: absolute;
-  left: 24px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #377081;
-  border-radius: 3px;
-}
-
-.step {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
+.carousel__wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 350px;
   gap: 30px;
-  margin-bottom: 40px;
-  padding: 30px 35px;
-  background: #f8f9fa;
+  animation: scroll-carousel 15s linear infinite;
+}
+
+.carousel__wrapper:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-carousel {
+  to {
+    transform: translateX(calc(-5 * (350px + 30px)));
+  }
+}
+
+.carousel__step {
+  background: white;
   border-radius: 20px;
-  border: 1px solid transparent;
+  padding: 40px 25px 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid #f0f0f0;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 360px;
 }
 
-.step:last-child {
-  margin-bottom: 0;
+.carousel__step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 45px rgba(55, 112, 129, 0.15);
+  border-color: #377081;
 }
 
-.step:hover {
-  transform: translateX(8px);
+.carousel__icon {
+  width: 80px;
+  height: 80px;
   background: white;
-  border-color: #8faea3;
-  box-shadow: 0 10px 35px rgba(143, 174, 163, 0.2);
-}
-
-/* Colores alternados */
-.step:nth-child(even) {
-  background: rgba(143, 174, 163, 0.25);
-  border: 1px solid rgba(143, 174, 163, 0.3);
-}
-
-.step:nth-child(even):hover {
-  background: white;
-  border-color: #3c3c3b;
-}
-
-.step:nth-child(even) .step__icon {
-  background: rgba(60, 60, 59, 0.2);
-}
-
-.step:nth-child(even):hover .step__icon {
-  background: rgba(60, 60, 59, 0.3);
-}
-
-.step:nth-child(even) .step__number {
-  background: linear-gradient(135deg, #3c3c3b 0%, #5a5a5a 100%);
-  box-shadow: 0 4px 20px rgba(60, 60, 59, 0.4);
-}
-
-/* Número del paso - sobre la línea */
-.step__number {
-  position: absolute;
-  left: -50px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #8faea3 0%, #a8c4ba 100%);
-  border: 4px solid white;
+  border: 3px solid #377081;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: white;
-  box-shadow: 0 4px 20px rgba(143, 174, 163, 0.4);
-  z-index: 2;
-  transition: all 0.3s ease;
-}
-
-.step:hover .step__number {
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 25px rgba(143, 174, 163, 0.5);
-}
-
-/* Icono decorativo */
-.step__icon {
-  width: 55px;
-  height: 55px;
-  background: rgba(143, 174, 163, 0.15);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  color: #377081;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.step:hover .step__icon {
-  background: rgba(143, 174, 163, 0.25);
-  transform: scale(1.05);
+.carousel__icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #377081;
+  opacity: 0;
+  transform: scale(1.3);
+  transition: all 0.4s ease;
 }
 
-.step__content {
-  flex: 1;
+.carousel__step:hover .carousel__icon {
+  background: #377081;
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 30px rgba(55, 112, 129, 0.25);
 }
 
-.step__title {
-  font-size: 1.35rem;
+.carousel__step:hover .carousel__icon::before {
+  opacity: 0.3;
+  transform: scale(1.5);
+}
+
+.carousel__title {
+  font-size: 1.25rem;
   font-weight: 600;
   color: #3c3c3b;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: 'Raleway', sans-serif;
+  line-height: 1.3;
 }
 
-.step__description {
-  font-size: 1rem;
+.carousel__description {
+  font-size: 0.95rem;
   color: #666;
   line-height: 1.7;
   margin: 0;
   font-family: 'Raleway', sans-serif;
+  flex: 1;
 }
 
 /* CTA Button */
@@ -208,38 +179,38 @@
     margin-bottom: 50px;
   }
 
-  .how-we-work__steps {
-    padding-left: 45px;
-  }
-
-  .how-we-work__steps::before {
-    left: 20px;
-  }
-
-  .step {
-    padding: 25px 30px;
+  .carousel__wrapper {
+    grid-auto-columns: 300px;
     gap: 20px;
   }
 
-  .step__number {
-    left: -45px;
-    width: 45px;
-    height: 45px;
-    font-size: 1.2rem;
+  @keyframes scroll-carousel {
+    to {
+      transform: translateX(calc(-5 * (300px + 20px)));
+    }
   }
 
-  .step__icon {
-    width: 48px;
-    height: 48px;
-    font-size: 1.4rem;
+  .carousel__step {
+    padding: 35px 20px 28px;
+    min-height: 330px;
   }
 
-  .step__title {
-    font-size: 1.2rem;
+  .carousel__icon {
+    width: 70px;
+    height: 70px;
   }
 
-  .step__description {
-    font-size: 0.95rem;
+  .carousel__icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .carousel__title {
+    font-size: 1.15rem;
+  }
+
+  .carousel__description {
+    font-size: 0.9rem;
   }
 }
 
@@ -253,46 +224,38 @@
     margin-bottom: 40px;
   }
 
-  .how-we-work__steps {
-    padding-left: 40px;
-  }
-
-  .how-we-work__steps::before {
-    left: 17px;
-    width: 2px;
-  }
-
-  .step {
-    flex-direction: column;
-    padding: 20px;
+  .carousel__wrapper {
+    grid-auto-columns: 280px;
     gap: 15px;
-    margin-bottom: 30px;
   }
 
-  .step__number {
-    left: -40px;
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
-    border-width: 3px;
+  @keyframes scroll-carousel {
+    to {
+      transform: translateX(calc(-5 * (280px + 15px)));
+    }
   }
 
-  .step__icon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
+  .carousel__step {
+    padding: 30px 18px 25px;
+    min-height: 320px;
   }
 
-  .step__title {
-    font-size: 1.1rem;
+  .carousel__icon {
+    width: 65px;
+    height: 65px;
   }
 
-  .step__description {
-    font-size: 0.9rem;
+  .carousel__icon svg {
+    width: 24px;
+    height: 24px;
   }
 
-  .step:hover {
-    transform: translateX(5px);
+  .carousel__title {
+    font-size: 1.05rem;
+  }
+
+  .carousel__description {
+    font-size: 0.88rem;
   }
 
   .how-we-work__cta {
