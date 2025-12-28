@@ -8,8 +8,8 @@ const Hero = () => {
       <div className="hero__container">
         <div className="hero__content">
           <h1 className="hero__title">
-            Gestión Profesional<br />
-            Alojamientos Turísticos
+            GESTIÓN DE<br />
+            ALOJAMIENTOS TURÍSTICOS
           </h1>
           <h2 className="hero__location">
             ASTURIAS

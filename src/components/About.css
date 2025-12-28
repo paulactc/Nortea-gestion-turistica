@@ -224,6 +224,10 @@
 
 /* Responsive */
 @media (max-width: 968px) {
+  .about {
+    background-attachment: scroll;
+  }
+
   .about__container {
     grid-template-columns: 1fr;
     gap: 40px;
