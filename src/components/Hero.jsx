@@ -1,9 +1,11 @@
 import React from "react";
 import "./Hero.css";
+import imagenHero from "../assets/foto1.2.png";
 
 const Hero = () => {
   return (
     <section className="hero" id="inicio">
+      <img src={imagenHero} alt="Hero" className="hero__image" />
       <div className="hero__overlay"></div>
       <div className="hero__container">
         <div className="hero__content">

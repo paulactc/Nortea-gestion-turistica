@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import cuernoLogo from "../assets/cuerno.jpg";
+import cuernoLogo from "../assets/footer.jpg";
 
 const Footer = () => {
   return (

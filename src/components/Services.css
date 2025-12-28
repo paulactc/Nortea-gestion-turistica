@@ -92,8 +92,6 @@
   width: 40px;
   height: 40px;
   font-size: 1.1rem;
-  background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-section--flexible .service-card__title {
@@ -195,14 +193,14 @@
 .service-card__icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #8faea3, #a8c4ba);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(143, 174, 163, 0.3);
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .service-card--compact .service-card__icon {
@@ -280,6 +278,89 @@
   background: #444444;
   color: white;
   box-shadow: 0 8px 25px rgba(68, 68, 68, 0.3);
+}
+
+/* Colores de iconos - Paleta suave y profesional */
+.service-card__icon--blue {
+  background: linear-gradient(135deg, #7FA8C9, #6B96B8);
+  box-shadow: 0 4px 12px rgba(127, 168, 201, 0.25);
+}
+
+.service-card__icon--teal {
+  background: linear-gradient(135deg, #7CB8B3, #6AA39E);
+  box-shadow: 0 4px 12px rgba(124, 184, 179, 0.25);
+}
+
+.service-card__icon--cyan {
+  background: linear-gradient(135deg, #7BC5CF, #69B3BD);
+  box-shadow: 0 4px 12px rgba(123, 197, 207, 0.25);
+}
+
+.service-card__icon--purple {
+  background: linear-gradient(135deg, #A386B0, #8F7399);
+  box-shadow: 0 4px 12px rgba(163, 134, 176, 0.25);
+}
+
+.service-card__icon--pink {
+  background: linear-gradient(135deg, #D9909E, #C77E8C);
+  box-shadow: 0 4px 12px rgba(217, 144, 158, 0.25);
+}
+
+.service-card__icon--orange {
+  background: linear-gradient(135deg, #D89B7F, #C6896D);
+  box-shadow: 0 4px 12px rgba(216, 155, 127, 0.25);
+}
+
+.service-card__icon--gold {
+  background: linear-gradient(135deg, #D4B373, #BFA161);
+  box-shadow: 0 4px 12px rgba(212, 179, 115, 0.25);
+}
+
+.service-card__icon--coral {
+  background: linear-gradient(135deg, #D99B8F, #C7897D);
+  box-shadow: 0 4px 12px rgba(217, 155, 143, 0.25);
+}
+
+.service-card__icon--green {
+  background: linear-gradient(135deg, #8FAEA3, #7D9C92);
+  box-shadow: 0 4px 12px rgba(143, 174, 163, 0.25);
+}
+
+/* Hover effects para los iconos coloreados */
+.service-card:hover .service-card__icon--blue {
+  box-shadow: 0 6px 20px rgba(127, 168, 201, 0.35);
+}
+
+.service-card:hover .service-card__icon--teal {
+  box-shadow: 0 6px 20px rgba(124, 184, 179, 0.35);
+}
+
+.service-card:hover .service-card__icon--cyan {
+  box-shadow: 0 6px 20px rgba(123, 197, 207, 0.35);
+}
+
+.service-card:hover .service-card__icon--purple {
+  box-shadow: 0 6px 20px rgba(163, 134, 176, 0.35);
+}
+
+.service-card:hover .service-card__icon--pink {
+  box-shadow: 0 6px 20px rgba(217, 144, 158, 0.35);
+}
+
+.service-card:hover .service-card__icon--orange {
+  box-shadow: 0 6px 20px rgba(216, 155, 127, 0.35);
+}
+
+.service-card:hover .service-card__icon--gold {
+  box-shadow: 0 6px 20px rgba(212, 179, 115, 0.35);
+}
+
+.service-card:hover .service-card__icon--coral {
+  box-shadow: 0 6px 20px rgba(217, 155, 143, 0.35);
+}
+
+.service-card:hover .service-card__icon--green {
+  box-shadow: 0 6px 20px rgba(143, 174, 163, 0.35);
 }
 
 /* Responsive */

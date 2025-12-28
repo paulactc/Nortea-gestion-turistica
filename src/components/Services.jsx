@@ -20,48 +20,57 @@ const Services = () => {
     {
       icon: <Calendar size={24} />,
       title: "Gestión de reservas",
-      description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado."
+      description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado.",
+      color: "blue"
     },
       {
       icon: <FileText size={24} />,
       title: "Facturación Verifactu integrada",
-      description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado."
+      description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado.",
+      color: "teal"
     },
     {
       icon: <ClipboardList size={24} />,
       title: "Registro de viajeros",
-      description: "Emisión y envío online conforme a la normativa vigente."
+      description: "Emisión y envío online conforme a la normativa vigente.",
+      color: "cyan"
     },
     {
       icon: <Search size={24} />,
       title: "Perfil de Google",
-      description: "Creación y gestión del perfil para posicionarte en búsquedas locales."
+      description: "Creación y gestión del perfil para posicionarte en búsquedas locales.",
+      color: "purple"
     },
     {
       icon: <Sparkles size={24} />,
       title: "Optimización de anuncios",
-      description: "Mejoramos tus anuncios en Booking, Airbnb y otros portales con textos y fotos optimizadas."
+      description: "Mejoramos tus anuncios en Booking, Airbnb y otros portales con textos y fotos optimizadas.",
+      color: "pink"
     },
     {
       icon: <TrendingUp size={24} />,
       title: "Precios dinámicos",
-      description: "Ajustes diarios según demanda, ocupación, eventos locales y competencia."
+      description: "Ajustes diarios según demanda, ocupación, eventos locales y competencia.",
+      color: "orange"
     },
 
     {
       icon: <Star size={24} />,
       title: "Reputación online",
-      description: "Respuesta profesional y cercana a todas las reseñas."
+      description: "Respuesta profesional y cercana a todas las reseñas.",
+      color: "gold"
     },
     {
       icon: <MessageSquare size={24} />,
       title: "Atención al huésped 360°",
-      description: "Comunicación constante desde el primer contacto hasta el check-out, con guías y recomendaciones."
+      description: "Comunicación constante desde el primer contacto hasta el check-out, con guías y recomendaciones.",
+      color: "coral"
     },
     {
       icon: <Map size={24} />,
       title: "Información turística",
-      description: "Rutas, planes y consejos reales para mejorar la experiencia del viajero."
+      description: "Rutas, planes y consejos reales para mejorar la experiencia del viajero.",
+      color: "green"
     },
   ];
 
@@ -69,23 +78,27 @@ const Services = () => {
     {
       icon: <CheckCircle size={24} />,
       title: "Organización",
-      description: "Avisamos, cuadramos y confirmamos con tus proveedores."
+      description: "Avisamos, cuadramos y confirmamos con tus proveedores.",
+      color: "blue"
     },
 
     {
       icon: <Puzzle size={24} />,
       title: "Coordinación",
-      description: "Coordinamos limpieza,lavandería y horarios de entrada/salida."
+      description: "Coordinamos limpieza,lavandería y horarios de entrada/salida.",
+      color: "purple"
     },
     {
       icon: <Search size={24} />,
       title: "Seguimiento",
-      description: "Seguimos el calendario operativo para que nada quede suelto."
+      description: "Seguimos el calendario operativo para que nada quede suelto.",
+      color: "orange"
     },
     {
       icon: <Eye size={24} />,
       title: "Supervisión",
-      description: "Sin ejecucción física , solo organización, avisos y seguimientos"
+      description: "Sin ejecucción física , solo organización, avisos y seguimientos",
+      color: "teal"
     },
   ];
 
@@ -107,7 +120,7 @@ const Services = () => {
           <div className="service-section__grid">
             {onlineServices.map((service, index) => (
               <div key={index} className="service-card">
-                <div className="service-card__icon">{service.icon}</div>
+                <div className={`service-card__icon service-card__icon--${service.color}`}>{service.icon}</div>
                 <div className="service-card__content">
                   <h4 className="service-card__title">{service.title}</h4>
                   <p className="service-card__description">{service.description}</p>
@@ -136,7 +149,7 @@ const Services = () => {
           <div className="service-section__grid service-section__grid--small">
             {flexibleServices.map((service, index) => (
               <div key={index} className="service-card service-card--compact">
-                <div className="service-card__icon">{service.icon}</div>
+                <div className={`service-card__icon service-card__icon--${service.color}`}>{service.icon}</div>
                 <div className="service-card__content">
                   <h4 className="service-card__title">{service.title}</h4>
                   <p className="service-card__description">{service.description}</p>
