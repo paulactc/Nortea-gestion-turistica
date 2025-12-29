@@ -27,17 +27,22 @@ const Header = () => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
       <div className="header__container">
-        <div className="header__logo">
+        <Link to="/" className="header__logo" onClick={handleLogoClick}>
           <img
             src={logo}
             alt="NORTEA GESTION TURÍSITICA"
             className="header__logo-image"
           />
           <span className="header__logo-text">NORTEA GESTION TURÍSTICA</span>
-        </div>
+        </Link>
 
         <div className="header__phone">
           <span className="header__phone-icon"><Phone size={20} /></span>
@@ -91,7 +96,8 @@ const Header = () => {
                   </a>
                 </li>
 
-                <li className="header__nav-item">
+                {/* Temporalmente comentado hasta volver a publicar */}
+                {/* <li className="header__nav-item">
                   <Link
                     to="/alojamientos"
                     className="header__nav-link"
@@ -99,7 +105,7 @@ const Header = () => {
                   >
                     Alojamientos
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="header__nav-item">
                   <a
@@ -143,7 +149,8 @@ const Header = () => {
                   </Link>
                 </li>
 
-                <li className="header__nav-item">
+                {/* Temporalmente comentado hasta volver a publicar */}
+                {/* <li className="header__nav-item">
                   <Link
                     to="/alojamientos"
                     className="header__nav-link"
@@ -151,7 +158,7 @@ const Header = () => {
                   >
                     Alojamientos
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="header__nav-item">
                   <Link

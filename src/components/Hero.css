@@ -19,6 +19,7 @@
   object-fit: cover;
   object-position: center 30%;
   z-index: 0;
+  transform: scale(1.30);
 }
 
 .hero__overlay {
@@ -187,16 +188,15 @@
 }
 
 .hero__cta--primary {
-  background: #8faea3;
+  background: linear-gradient(135deg, #8FAEA3 0%, #377081 100%);
   color: white;
   border: 2px solid #444444;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 25px rgba(55, 112, 129, 0.3);
 }
 
 .hero__cta--primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
-  background: #7a9a8f;
+  box-shadow: 0 10px 35px rgba(55, 112, 129, 0.4);
 }
 
 .hero__cta--secondary {

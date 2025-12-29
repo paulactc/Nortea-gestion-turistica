@@ -118,7 +118,7 @@
 }
 
 .search-form__button {
-  background: linear-gradient(135deg, #8FAEA3 0%, #a8c4ba 100%);
+  background: linear-gradient(135deg, #8FAEA3 0%, #377081 100%);
   color: white;
   border: none;
   padding: 14px 35px;
@@ -128,7 +128,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
-  box-shadow: 0 4px 15px rgba(143, 174, 163, 0.3);
+  box-shadow: 0 6px 25px rgba(55, 112, 129, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +141,7 @@
 
 .search-form__button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(143, 174, 163, 0.4);
+  box-shadow: 0 10px 35px rgba(55, 112, 129, 0.4);
 }
 
 .search-form__button:active {
@@ -351,7 +351,7 @@
 }
 
 .accommodation-card__button {
-  background: linear-gradient(135deg, #8FAEA3 0%, #a8c4ba 100%);
+  background: linear-gradient(135deg, #8FAEA3 0%, #377081 100%);
   color: white;
   border: none;
   padding: 12px 28px;
@@ -362,7 +362,7 @@
   transition: all 0.3s ease;
   font-family: inherit;
   white-space: nowrap;
-  box-shadow: 0 4px 15px rgba(143, 174, 163, 0.25);
+  box-shadow: 0 6px 25px rgba(55, 112, 129, 0.3);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -376,7 +376,7 @@
 
 .accommodation-card__button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(143, 174, 163, 0.4);
+  box-shadow: 0 10px 35px rgba(55, 112, 129, 0.4);
 }
 
 .accommodation-card__button:active {

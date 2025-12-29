@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { MessageCircle, Home, FileSearch, Settings, Handshake } from "lucide-react";
 import "./HowWeWork.css";
 
 const HowWeWork = () => {
+  const wrapperRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const steps = [
     {
       icon: <MessageCircle size={28} strokeWidth={1.5} />,
@@ -31,14 +36,79 @@ const HowWeWork = () => {
     },
   ];
 
+  // Manejo de arrastre con mouse - pausa la animación mientras arrastra
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+    if (wrapperRef.current) {
+      const transform = window.getComputedStyle(wrapperRef.current).transform;
+      if (transform !== 'none') {
+        const matrix = new DOMMatrix(transform);
+        setScrollLeft(matrix.m41);
+      }
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.clientX;
+    const walk = (x - startX) * 1.5;
+    if (wrapperRef.current) {
+      wrapperRef.current.style.transform = `translateX(${scrollLeft + walk}px)`;
+    }
+  };
+
+  // Manejo de arrastre táctil
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].clientX);
+    if (wrapperRef.current) {
+      const transform = window.getComputedStyle(wrapperRef.current).transform;
+      if (transform !== 'none') {
+        const matrix = new DOMMatrix(transform);
+        setScrollLeft(matrix.m41);
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const x = e.touches[0].clientX;
+    const walk = (x - startX) * 1.5;
+    if (wrapperRef.current) {
+      wrapperRef.current.style.transform = `translateX(${scrollLeft + walk}px)`;
+    }
+  };
+
   return (
     <section className="how-we-work" id="como-trabajamos">
       <div className="how-we-work__container">
         <h2 className="how-we-work__title">Cómo trabajamos</h2>
 
         {/* Carrusel de pasos */}
-        <div className="carousel">
-          <div className="carousel__wrapper">
+        <div
+          className="carousel"
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onTouchMove={handleTouchMove}
+        >
+          <div
+            ref={wrapperRef}
+            className={`carousel__wrapper ${isDragging ? 'paused' : ''}`}
+          >
             {steps.map((step, index) => (
               <div key={index} className="carousel__step">
                 <div className="carousel__icon">{step.icon}</div>

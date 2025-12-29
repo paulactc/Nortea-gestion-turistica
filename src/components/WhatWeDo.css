@@ -100,21 +100,21 @@
 .what-we-do__cta {
   display: inline-block;
   margin-top: 50px;
-  background: linear-gradient(135deg, #8faea3 0%, #a8c4ba 100%);
+  background: linear-gradient(135deg, #8FAEA3 0%, #377081 100%);
   color: white;
   text-decoration: none;
   padding: 16px 40px;
   font-size: 1.05rem;
   font-weight: 600;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(143, 174, 163, 0.3);
+  box-shadow: 0 6px 25px rgba(55, 112, 129, 0.3);
   transition: all 0.3s ease;
   font-family: inherit;
 }
 
 .what-we-do__cta:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(143, 174, 163, 0.4);
+  box-shadow: 0 10px 35px rgba(55, 112, 129, 0.4);
 }
 
 /* Responsive */

@@ -7,8 +7,8 @@ const WhatWeDo = () => {
       <div className="what-we-do__container">
         <h2 className="what-we-do__title">Qué hacemos</h2>
         <p className="what-we-do__description">
-          Gestionamos alojamientos rurales en Asturias con profesionalidad y trato cercano.
-          Ponemos en valor tu alojamiento,acompañamos a tus huéspedes y te ayudamos a aumentar las reservas sin perder la esencia del lugar de forma sencilla.
+          Gestionamos y comercializamos alojamientos turísticos en Asturias con profesionalidad y trato cercano.
+          Ponemos en valor tu alojamiento, acompañamos a tus huéspedes y te ayudamos a aumentar las reservas sin perder la esencia del lugar de forma sencilla.
         </p>
 
         <div className="what-we-do__features">

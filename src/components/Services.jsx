@@ -9,7 +9,8 @@ import {
   Star,
   CheckCircle,
   Puzzle,
-  Eye
+  Eye,
+  Camera
 } from "lucide-react";
 import "./Services.css";
 
@@ -21,44 +22,49 @@ const Services = () => {
       description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado.",
       color: "blue"
     },
-      {
+    {
       icon: <FileText size={24} />,
       title: "Facturación Verifactu integrada",
       description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado.",
-      color: "teal"
+      color: "coral"
     },
     {
       icon: <ClipboardList size={24} />,
       title: "Registro de viajeros",
       description: "Emisión y envío online conforme a la normativa vigente.",
-      color: "cyan"
+      color: "teal"
     },
     {
       icon: <Search size={24} />,
       title: "Perfil de Google",
       description: "Creación y gestión del perfil para posicionarte en búsquedas locales.",
-      color: "purple"
+      color: "orange"
     },
     {
       icon: <Sparkles size={24} />,
       title: "Optimización de anuncios",
       description: "Mejoramos tus anuncios en Booking, Airbnb y otros portales con textos y fotos optimizadas.",
-      color: "pink"
+      color: "purple"
     },
     {
       icon: <TrendingUp size={24} />,
       title: "Precios dinámicos",
       description: "Ajustes diarios según demanda, ocupación, eventos locales y competencia.",
-      color: "orange"
+      color: "gold"
     },
-
     {
       icon: <Star size={24} />,
       title: "Reputación online",
       description: "Respuesta profesional y cercana a todas las reseñas.",
-      color: "gold"
+      color: "cyan"
     },
-   
+    {
+      icon: <Camera size={24} />,
+      title: "Reportaje fotográfico",
+      description: "Realización de fotografías del alojamiento.",
+      color: "pink"
+    },
+
   ];
 
   const flexibleServices = [
