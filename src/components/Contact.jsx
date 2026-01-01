@@ -44,7 +44,7 @@ const Contact = () => {
       <div className="contact-container">
         <h1 className="contact-main-title">Cuéntanos sobre tu alojamiento</h1>
         <p className="contact-intro">
-            Solo necesitamos lo básico: dónde está y qué te gustaría delegar.
+            Solo necesitamos lo básico: dónde está como lo gestionas actualmente.
             Escríbenos y nos pondremos en contacto contigo para verlo juntos.
 
         </p>
