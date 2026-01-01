@@ -17,22 +17,10 @@ import "./Services.css";
 const Services = () => {
   const onlineServices = [
     {
-      icon: <Calendar size={24} />,
-      title: "Gestión de reservas",
-      description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado.",
-      color: "blue"
-    },
-    {
-      icon: <FileText size={24} />,
-      title: "Facturación Verifactu integrada",
-      description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado.",
-      color: "coral"
-    },
-    {
-      icon: <ClipboardList size={24} />,
-      title: "Registro de viajeros",
-      description: "Emisión y envío online conforme a la normativa vigente.",
-      color: "teal"
+      icon: <Camera size={24} />,
+      title: "Reportaje fotográfico",
+      description: "Mostramos el alojamiento de forma clara y cuidada",
+      color: "pink"
     },
     {
       icon: <Search size={24} />,
@@ -46,25 +34,42 @@ const Services = () => {
       description: "Mejoramos tus anuncios en Booking, Airbnb y otros portales con textos y fotos optimizadas.",
       color: "purple"
     },
+
+    {
+      icon: <Calendar size={24} />,
+      title: "Gestión de reservas",
+      description: "Centralizamos canales, evitamos overbooking y mantenemos el calendario siempre sincronizado.",
+      color: "blue"
+    },
     {
       icon: <TrendingUp size={24} />,
       title: "Precios dinámicos",
       description: "Ajustes diarios según demanda, ocupación, eventos locales y competencia.",
       color: "gold"
     },
+     {
+      icon: <ClipboardList size={24} />,
+      title: "Registro de viajeros",
+      description: "Emisión y envío online conforme a la normativa vigente.",
+      color: "teal"
+    },
+    
+    {
+      icon: <FileText size={24} />,
+      title: "Facturación Verifactu integrada",
+      description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado.",
+      color: "coral"
+    },
+   
+    
+    
     {
       icon: <Star size={24} />,
       title: "Reputación online",
       description: "Respuesta profesional y cercana a todas las reseñas.",
       color: "cyan"
     },
-    {
-      icon: <Camera size={24} />,
-      title: "Reportaje fotográfico",
-      description: "Realización de fotografías del alojamiento.",
-      color: "pink"
-    },
-
+    
   ];
 
   const flexibleServices = [
@@ -106,7 +111,7 @@ const Services = () => {
             <h2 className="service-section__title">Gestión Online</h2>
             <p className="service-section__description">
               La opción ideal para propietarios que quieren optimizar la rentabilidad
-              de su alojamiento sin complicarse. Nos ocupamos de toda la parte digital.
+              de su alojamiento sin complicarse. Nos ocupamos de toda la parte digital y de la comercialización online:presencia en los principales portales (Booking,Airbnb, Escapada Rural..)control de reservas,precios y visibilidad para atraer más huespedes.
             </p>
           </div>
 

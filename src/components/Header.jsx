@@ -96,8 +96,7 @@ const Header = () => {
                   </a>
                 </li>
 
-                {/* Temporalmente comentado hasta volver a publicar */}
-                {/* <li className="header__nav-item">
+                <li className="header__nav-item">
                   <Link
                     to="/alojamientos"
                     className="header__nav-link"
@@ -105,7 +104,7 @@ const Header = () => {
                   >
                     Alojamientos
                   </Link>
-                </li> */}
+                </li>
 
                 <li className="header__nav-item">
                   <a
@@ -149,8 +148,7 @@ const Header = () => {
                   </Link>
                 </li>
 
-                {/* Temporalmente comentado hasta volver a publicar */}
-                {/* <li className="header__nav-item">
+                <li className="header__nav-item">
                   <Link
                     to="/alojamientos"
                     className="header__nav-link"
@@ -158,7 +156,7 @@ const Header = () => {
                   >
                     Alojamientos
                   </Link>
-                </li> */}
+                </li>
 
                 <li className="header__nav-item">
                   <Link

@@ -6,11 +6,11 @@
   margin-top: 0;
   background-color: #EAECEC;
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   position: relative;
   border-top: 1px solid rgba(60, 60, 59, 0.1);
+  transition: background-position 0.1s ease-out;
 }
 
 .about::before {
@@ -224,10 +224,6 @@
 
 /* Responsive */
 @media (max-width: 968px) {
-  .about {
-    background-attachment: scroll;
-  }
-
   .about__container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -258,7 +254,6 @@
 @media (max-width: 576px) {
   .about {
     padding: 60px 20px;
-    background-attachment: scroll;
   }
 
   .about__title {
@@ -353,17 +348,21 @@
   position: relative;
   display: inline-block;
   width: 100%;
+  padding-bottom: 15px;
 }
 
 .about-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%) translateX(-130px);
+  transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #377081;
+  background: linear-gradient(90deg,
+    rgba(55, 112, 129, 0.3),
+    rgba(55, 112, 129, 0.8),
+    rgba(55, 112, 129, 0.3));
   border-radius: 2px;
 }
 
@@ -392,9 +391,25 @@
   font-weight: 200;
   color: #000000;
   margin-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   text-align: center;
   font-family: Georgia;
+  position: relative;
+}
+
+.about-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg,
+    rgba(55, 112, 129, 0.3),
+    rgba(55, 112, 129, 0.8),
+    rgba(55, 112, 129, 0.3));
+  border-radius: 2px;
 }
 
 .about-features {
@@ -421,10 +436,6 @@
 
 /* Responsive para features */
 @media (max-width: 768px) {
-  .about {
-    background-attachment: scroll;
-  }
-
   .about-features {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -449,7 +460,7 @@
   .about-subtitle {
     font-size: 2rem;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: 300;
   }
 }
@@ -471,7 +482,7 @@
 
   .about-subtitle {
     font-size: 1.8rem;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-weight: 300;
   }
 }
@@ -488,6 +499,22 @@
   color: #3c3c3b;
   margin-bottom: 15px;
   font-family: Georgia;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.feature-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    rgba(143, 174, 163, 0.4),
+    rgba(143, 174, 163, 0.8),
+    rgba(143, 174, 163, 0.3));
+  border-radius: 2px;
 }
 
 .feature-description {

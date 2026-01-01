@@ -21,17 +21,21 @@
   font-family: Georgia;
   position: relative;
   display: inline-block;
+  padding-bottom: 15px;
 }
 
 .contact-main-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%) translateX(-210px);
+  transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #377081;
+  background: linear-gradient(90deg,
+    rgba(55, 112, 129, 0.3),
+    rgba(55, 112, 129, 0.8),
+    rgba(55, 112, 129, 0.3));
   border-radius: 2px;
 }
 
@@ -231,6 +235,27 @@
   color: #3c3c3b;
 }
 
+.submit-message {
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.submit-message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #66bb6a;
+}
+
+.submit-message.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef5350;
+}
+
 .submit-btn {
   width: 100%;
   background: linear-gradient(135deg, #8FAEA3 0%, #377081 100%);
@@ -247,13 +272,18 @@
   margin-top: 10px;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   transform: translateY(-3px);
   box-shadow: 0 10px 35px rgba(55, 112, 129, 0.4);
 }
 
-.submit-btn:active {
+.submit-btn:active:not(:disabled) {
   transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* Responsive */
