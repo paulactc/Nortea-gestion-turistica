@@ -1,12 +1,11 @@
 /* About Component - Diseño profesional con tonos pasteles */
 
 .about {
-  padding: 80px 20px;
-  padding-top: 40px;
+  padding: 120px 20px 80px 20px;
   margin-top: 0;
   background-color: #EAECEC;
-  background-size: cover;
-  background-position: center 30%;
+  background-size: contain;
+  background-position: center 80px;
   background-repeat: no-repeat;
   position: relative;
   border-top: 1px solid rgba(60, 60, 59, 0.1);
@@ -224,6 +223,11 @@
 
 /* Responsive */
 @media (max-width: 968px) {
+  .about {
+    padding: 100px 20px 70px 20px;
+    background-position: center 60px;
+  }
+
   .about__container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -253,7 +257,8 @@
 
 @media (max-width: 576px) {
   .about {
-    padding: 60px 20px;
+    padding: 80px 20px 60px 20px;
+    background-position: center 50px;
   }
 
   .about__title {
@@ -270,10 +275,16 @@
 
   .about-title {
     font-size: 2rem;
+    margin-bottom: 30px;
   }
 
   .about-intro {
     font-size: 1rem;
+  }
+
+  .about-intro-main {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
   }
 
   .feature {
@@ -341,7 +352,8 @@
   font-size: 2.8rem;
   font-weight: 200;
   color: #000000;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  margin-top: 0;
   line-height: 1.2;
   letter-spacing: -0.5px;
   font-family: Georgia;
@@ -378,8 +390,9 @@
 .about-intro-main {
   font-size: 1.2rem;
   color: #000000;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  margin-top: 0;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   font-weight: 500;

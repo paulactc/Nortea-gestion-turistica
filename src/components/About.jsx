@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./About.css";
-import imagenFondo from "../assets/imagen.jpg";
+import imagenFondo from "../assets/gestion.jpg";
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -36,7 +36,7 @@ const About = () => {
           <h2 className="about-title">Nuestra mirada</h2>
           <p className="about-intro-main">
             En Nortea creemos que la gestión turística no es solo cuestión de calendarios y plataformas.
-            Es acompañar lugares que tiene alma y hacer que quienes llegan puedan disfrutar del lugar como merecen.
+            Es acompañar lugares que tienen alma y hacer que quienes llegan puedan disfrutar del lugar como merecen.
           </p>
           <p className="about-intro-main">
             Nuestra forma de trabajar es sencilla: cercanía,organización y cuidado de cada detalle.
@@ -54,7 +54,7 @@ const About = () => {
               <h4 className="feature-title">Experiencia desde dentro del sector</h4>
               <p className="feature-description">
                 Conocemos el día a día de la gestión turística en Asturias,
-                porque lo hemos vivido desde todos los ángulos.
+                porque lo vivimos desde todos los ángulos.
               </p>
             </div>
             <div className="feature">

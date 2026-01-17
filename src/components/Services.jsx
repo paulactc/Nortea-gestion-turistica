@@ -19,7 +19,7 @@ const Services = () => {
     {
       icon: <Camera size={24} />,
       title: "Reportaje fotográfico",
-      description: "Mostramos el alojamiento de forma clara y cuidada",
+      description: "Mostramos tu alojamiento de forma clara y cuidada",
       color: "pink"
     },
     {
