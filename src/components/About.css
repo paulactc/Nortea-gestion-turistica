@@ -233,6 +233,18 @@
   .about {
     padding: 100px 20px 70px 20px;
     background-attachment: scroll;
+    background-size: 100% auto;
+    background-position: center top;
+  }
+
+  .about::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(234, 236, 236, 1) 0%,
+      rgba(234, 236, 236, 0.85) 5%,
+      rgba(234, 220, 218, 0.45) 15%,
+      rgba(234, 200, 200, 0.35) 100%
+    );
   }
 
   .about__container {
@@ -265,6 +277,17 @@
 @media (max-width: 576px) {
   .about {
     padding: 80px 20px 60px 20px;
+    background-size: 100% auto;
+  }
+
+  .about::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(234, 236, 236, 1) 0%,
+      rgba(234, 236, 236, 0.8) 5%,
+      rgba(234, 220, 218, 0.4) 12%,
+      rgba(234, 200, 200, 0.3) 100%
+    );
   }
 
   .about__title {
