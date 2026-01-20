@@ -1,32 +1,9 @@
-import React, { useEffect, useRef } from "react";
 import "./About.css";
 import imagenFondo from "../assets/gestion.jpg";
 
 const About = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const section = sectionRef.current;
-      const rect = section.getBoundingClientRect();
-      const scrollPercentage = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-
-      // Mueve la imagen de fondo de forma sutil mientras scrolleas
-      const movement = scrollPercentage * 30; // Ajusta el 30 para más o menos movimiento
-      section.style.backgroundPosition = `center ${30 + movement}%`;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Ejecutar una vez al montar
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
       className="about"
       id="nosotros"
       style={{ backgroundImage: `url(${imagenFondo})` }}

@@ -96,7 +96,7 @@ const Header = () => {
                   </a>
                 </li>
 
-                <li className="header__nav-item">
+                {/* <li className="header__nav-item">
                   <Link
                     to="/alojamientos"
                     className="header__nav-link"
@@ -104,7 +104,7 @@ const Header = () => {
                   >
                     Alojamientos
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="header__nav-item">
                   <a
@@ -148,7 +148,7 @@ const Header = () => {
                   </Link>
                 </li>
 
-                <li className="header__nav-item">
+                {/* <li className="header__nav-item">
                   <Link
                     to="/alojamientos"
                     className="header__nav-link"
@@ -156,7 +156,7 @@ const Header = () => {
                   >
                     Alojamientos
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="header__nav-item">
                   <Link
