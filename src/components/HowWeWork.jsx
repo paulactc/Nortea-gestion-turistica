@@ -40,14 +40,17 @@ const HowWeWork = () => {
       <div className="how-we-work__container">
         <h2 className="how-we-work__title">Cómo trabajamos</h2>
 
-        <div className="steps-grid">
+        <div className="timeline">
+          <div className="timeline-line"></div>
           {steps.map((step, index) => (
-            <div key={index} className="step-item">
-              <div className="step-number">{step.number}</div>
-              <div className="step-content">
-                <div className="step-icon">{step.icon}</div>
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-description">{step.description}</p>
+            <div key={index} className="timeline-item">
+              <div className="timeline-marker">
+                <div className="timeline-number">{step.number}</div>
+                <div className="timeline-icon">{step.icon}</div>
+              </div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">{step.title}</h3>
+                <p className="timeline-description">{step.description}</p>
               </div>
             </div>
           ))}

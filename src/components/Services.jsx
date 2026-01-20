@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Calendar,
-  FileText,
   ClipboardList,
   Search,
   Sparkles,
@@ -52,13 +51,6 @@ const Services = () => {
       title: "Registro de viajeros",
       description: "Emisión y envío online conforme a la normativa vigente.",
       color: "teal"
-    },
-    
-    {
-      icon: <FileText size={24} />,
-      title: "Facturación Verifactu integrada",
-      description: "Cumplimos con la normativa verifactu para que para que todo sea seguro,legal y automatizado.",
-      color: "coral"
     },
    
     
