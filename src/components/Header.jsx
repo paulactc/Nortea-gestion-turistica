@@ -47,7 +47,7 @@ const Header = () => {
         <div className="header__phone">
           <span className="header__phone-icon"><Phone size={20} /></span>
           <div className="header__phone-info">
-            <span className="header__phone-number">653649789</span>
+            <span className="header__phone-number">609 368 133</span>
             <span className="header__phone-label">llámanos</span>
           </div>
         </div>
