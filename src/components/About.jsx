@@ -6,7 +6,6 @@ const About = () => {
     <section
       className="about"
       id="nosotros"
-      style={{ backgroundImage: `url(${imagenFondo})` }}
     >
       <div className="about-container">
         <div className="about-content">
@@ -26,7 +25,7 @@ const About = () => {
 
           <h3 className="about-subtitle"></h3>
 
-          <div className="about-features">
+          <div className="about-features" style={{ backgroundImage: `url(${imagenFondo})` }}>
             <div className="feature">
               <h4 className="feature-title">Experiencia desde dentro del sector</h4>
               <p className="feature-description">

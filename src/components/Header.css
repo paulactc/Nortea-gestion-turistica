@@ -85,8 +85,9 @@
 
 .header__phone-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 8px;
 }
 
 .header__phone-number {
@@ -96,6 +97,7 @@
   line-height: 1.2;
   font-variant-numeric: lining-nums tabular-nums;
   font-family: 'Raleway', sans-serif;
+  white-space: nowrap;
 }
 
 .header__phone-label {

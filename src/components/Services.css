@@ -301,6 +301,7 @@
 }
 
 .service-section__cta {
+  display: inline-block;
   background: linear-gradient(135deg, #8FAEA3 0%, #377081 100%);
   color: white;
   border: none;
@@ -312,6 +313,9 @@
   box-shadow: 0 6px 25px rgba(55, 112, 129, 0.3);
   transition: all 0.3s ease;
   font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .service-section__cta:hover {
@@ -507,8 +511,10 @@
   }
 
   .service-section__cta {
+    display: block;
     width: 100%;
-    padding: 14px 30px;
-    font-size: 1rem;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
   }
 }
