@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
@@ -10,26 +11,27 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitMessage("");
 
-    const form = e.target;
-
-    // IMPORTANTE: Reemplaza 'TU_FORM_ID' con tu Form ID de Formspree
-    // Ejemplo: https://formspree.io/f/xpwzabcd
-    const formspreeEndpoint = "https://formspree.io/f/xeeoegob";
+    // Configuración de EmailJS
+    // IMPORTANTE: Debes configurar estos valores en EmailJS:
+    // 1. Crea una cuenta en https://www.emailjs.com/
+    // 2. Crea un servicio de email (ej: Gmail, Outlook)
+    // 3. Crea una plantilla de email
+    // 4. Obtén tu Public Key desde Account > General
+    const SERVICE_ID = "TU_SERVICE_ID"; // Reemplazar
+    const TEMPLATE_ID = "TU_TEMPLATE_ID"; // Reemplazar
+    const PUBLIC_KEY = "TU_PUBLIC_KEY"; // Reemplazar
 
     try {
-      const response = await fetch(formspreeEndpoint, {
-        method: "POST",
-        body: new FormData(form),
-        headers: {
-          Accept: "application/json"
-        }
-      });
+      const result = await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        e.target,
+        PUBLIC_KEY
+      );
 
-      if (response.ok) {
+      if (result.text === "OK") {
         setSubmitMessage("¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.");
-        form.reset();
-      } else {
-        setSubmitMessage("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+        e.target.reset();
       }
     } catch (error) {
       console.error("Error al enviar formulario:", error);

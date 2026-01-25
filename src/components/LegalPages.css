@@ -1,0 +1,144 @@
+.legal-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 100px 20px 60px;
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.legal-container h1 {
+  color: #2c5f2d;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #97c35b;
+}
+
+.legal-container h2 {
+  color: #2c5f2d;
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.legal-container h3 {
+  color: #4a7c4e;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.legal-container section {
+  margin-bottom: 30px;
+}
+
+.legal-container p {
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.legal-container ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.legal-container ul li {
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.legal-container strong {
+  color: #2c5f2d;
+  font-weight: 600;
+}
+
+.cookies-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white;
+}
+
+.cookies-table thead {
+  background-color: #2c5f2d;
+  color: white;
+}
+
+.cookies-table th,
+.cookies-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.cookies-table th {
+  font-weight: 600;
+}
+
+.cookies-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.cookies-table tbody tr:hover {
+  background-color: #f0f7f0;
+}
+
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 80px 15px 40px;
+  }
+
+  .legal-container {
+    padding: 25px;
+  }
+
+  .legal-container h1 {
+    font-size: 2rem;
+  }
+
+  .legal-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .legal-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .cookies-table {
+    font-size: 0.9rem;
+  }
+
+  .cookies-table th,
+  .cookies-table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .legal-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .cookies-table {
+    font-size: 0.8rem;
+  }
+
+  .cookies-table th,
+  .cookies-table td {
+    padding: 6px;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import cuernoLogo from "../assets/footer.jpg";
 
@@ -63,12 +64,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="footer-legal">
-          <a href="#">Aviso legal</a>
-          <a href="#">Política de privacidad</a>
-          <a href="#">Política de cookies (UE)</a>
-        
-        </div>
+     <div className="legal-links">
+        <Link to="/aviso-legal">Aviso Legal</Link>
+        <Link to="/politica-privacidad">Política de Privacidad</Link>
+        <Link to="/politica-cookies">Política de Cookies</Link>
+      </div>
         <p className="footer-copyright">2025 © Nortea Gestión Turística. Todos los derechos reservados.</p>
       </div>
     </footer>
