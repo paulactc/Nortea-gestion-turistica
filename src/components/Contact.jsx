@@ -1,45 +1,21 @@
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useForm, ValidationError } from "@formspree/react";
 import "./Contact.css";
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
+  const [state, handleSubmit] = useForm("xbdowjae");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitMessage("");
-
-    // Configuración de EmailJS
-    // IMPORTANTE: Debes configurar estos valores en EmailJS:
-    // 1. Crea una cuenta en https://www.emailjs.com/
-    // 2. Crea un servicio de email (ej: Gmail, Outlook)
-    // 3. Crea una plantilla de email
-    // 4. Obtén tu Public Key desde Account > General
-    const SERVICE_ID = "TU_SERVICE_ID"; // Reemplazar
-    const TEMPLATE_ID = "TU_TEMPLATE_ID"; // Reemplazar
-    const PUBLIC_KEY = "TU_PUBLIC_KEY"; // Reemplazar
-
-    try {
-      const result = await emailjs.sendForm(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        e.target,
-        PUBLIC_KEY
-      );
-
-      if (result.text === "OK") {
-        setSubmitMessage("¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.");
-        e.target.reset();
-      }
-    } catch (error) {
-      console.error("Error al enviar formulario:", error);
-      setSubmitMessage("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o contáctanos directamente.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  if (state.succeeded) {
+    return (
+      <section className="contact" id="contacto">
+        <div className="contact-container">
+          <h1 className="contact-main-title">¡Mensaje enviado!</h1>
+          <p className="contact-intro">
+            Gracias por contactarnos. Nos pondremos en contacto contigo pronto.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="contact" id="contacto">
@@ -62,6 +38,7 @@ const Contact = () => {
                   name="name"
                   required
                 />
+                <ValidationError prefix="Nombre" field="name" errors={state.errors} />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email *</label>
@@ -71,6 +48,7 @@ const Contact = () => {
                   name="email"
                   required
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
             </div>
 
@@ -83,6 +61,7 @@ const Contact = () => {
                   name="phone"
                   required
                 />
+                <ValidationError prefix="Teléfono" field="phone" errors={state.errors} />
               </div>
               <div className="form-group">
                 <label htmlFor="location">Localidad del alojamiento *</label>
@@ -92,6 +71,7 @@ const Contact = () => {
                   name="location"
                   required
                 />
+                <ValidationError prefix="Localidad" field="location" errors={state.errors} />
               </div>
             </div>
 
@@ -105,6 +85,7 @@ const Contact = () => {
                   placeholder="casa, apartamento, hotel rural..."
                   required
                 />
+                <ValidationError prefix="Tipo" field="type" errors={state.errors} />
               </div>
               <div className="form-group">
                 <label htmlFor="listing">Enlace al anuncio (opcional)</label>
@@ -113,6 +94,7 @@ const Contact = () => {
                   id="listing"
                   name="listing"
                 />
+                <ValidationError prefix="Enlace" field="listing" errors={state.errors} />
               </div>
             </div>
 
@@ -123,17 +105,12 @@ const Contact = () => {
                   id="needs"
                   name="needs"
                   required
-                />
+              />
+              <ValidationError prefix="Necesidades" field="needs" errors={state.errors} />
             </div>
 
-            {submitMessage && (
-              <div className={`submit-message ${submitMessage.includes('error') ? 'error' : 'success'}`}>
-                {submitMessage}
-              </div>
-            )}
-
-            <button type="submit" className="submit-btn" disabled={isSubmitting}>
-              {isSubmitting ? "Enviando..." : "Solicitar evaluación gratuita"}
+            <button type="submit" className="submit-btn" disabled={state.submitting}>
+              {state.submitting ? "Enviando..." : "Solicitar evaluación gratuita"}
             </button>
           </form>
         </div>
