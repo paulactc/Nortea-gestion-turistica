@@ -7,6 +7,7 @@ const About = () => {
       className="about"
       id="nosotros"
     >
+      <div className="about-background-image" style={{ backgroundImage: `url(${imagenFondo})` }}></div>
       <div className="about-container">
         <div className="about-content">
           <h2 className="about-title">Nuestra mirada</h2>
@@ -25,7 +26,7 @@ const About = () => {
 
           <h3 className="about-subtitle"></h3>
 
-          <div className="about-features" style={{ backgroundImage: `url(${imagenFondo})` }}>
+          <div className="about-features">
             <div className="feature">
               <h4 className="feature-title">Experiencia desde dentro del sector</h4>
               <p className="feature-description">
